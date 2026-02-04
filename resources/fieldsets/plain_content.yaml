@@ -1,0 +1,21 @@
+title: 'Plain Content'
+fields:
+  -
+    handle: content
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      remove_empty_nodes: false
+      type: bard
+      display: Content

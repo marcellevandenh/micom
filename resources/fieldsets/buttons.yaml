@@ -1,0 +1,57 @@
+title: Buttons
+fields:
+  -
+    handle: buttons
+    field:
+      mode: stacked
+      type: grid
+      display: Buttons
+      fields:
+        -
+          handle: icon
+          field:
+            max_files: 1
+            container: assets
+            type: assets
+            display: Icon
+            width: 50
+        -
+          handle: text
+          field:
+            type: text
+            display: Text
+            validate:
+              - required
+            width: 50
+        -
+          handle: link
+          field:
+            type: link
+            display: Link
+            width: 50
+        -
+          handle: asset
+          field:
+            max_files: 1
+            container: assets
+            type: assets
+            display: Asset
+            width: 50
+        -
+          handle: new_tab
+          field:
+            type: toggle
+            display: 'New Tab'
+            width: 33
+        -
+          handle: pill_styling
+          field:
+            type: toggle
+            display: 'Pill Styling'
+            width: 33
+        -
+          handle: outline_styling
+          field:
+            type: toggle
+            display: 'Outline Styling'
+            width: 33

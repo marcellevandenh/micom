@@ -1,0 +1,31 @@
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ meta_description or title }}" />
+<meta property="og:type" content="website" />
+<meta name="og:title" content="{{ meta_title or title }} | {{ site:name }}" />
+<meta property="og:description" content="{{ meta_description or title }}" />
+<meta property="og:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
+<meta property="og:url" content="{{ current_url }}" />
+<meta property="og:locale" content="en" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ meta_title or title }} | {{ site:name }}" />
+<meta name="twitter:description" content="{{ meta_description or title }}" />
+<meta name="twitter:image" content="{{ permalink | replace="{url}|" }}{{ thumbnail or company_info:logo }}" />
+<link rel="canonical" href="{{ canonical_tag or current_url }}" />
+<link rel="alternate" media="only screen and (max-width: 640px)"  href="{{ current_url }}" />
+{{ if noindex_page }}<meta name="robots" content="noindex, nofollow" />{{ endif }}
+
+{{ if schema }}
+    <script type="application/ld+json">
+        {{ schema }}
+    </script>
+{{ endif }}
+
+<link rel="icon" type="image/png" href="{{ glide:company_info:favicon width='16' height='16' }}" sizes="16x16">
+<link rel="icon" type="image/png" href="{{ glide:company_info:favicon width='32' height='32' }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ glide:company_info:favicon width='96' height='96' }}" sizes="96x96">
+
+<link rel="apple-touch-icon" href="{{ glide:company_info:favicon width='152' height='152' }}" sizes="152x152">
+<link rel="apple-touch-icon" href="{{ glide:company_info:favicon width='167' height='167' }}" sizes="167x167">
+<link rel="apple-touch-icon" href="{{ glide:company_info:favicon width='180' height='180' }}" sizes="180x180">

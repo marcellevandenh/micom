@@ -1,0 +1,13 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: "NAME OF FONT";
+    font-weight: 1 1000;
+    src: url("../../public/fonts/LINK TO FONT") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-stretch: normal;
+}

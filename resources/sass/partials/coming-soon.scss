@@ -1,0 +1,23 @@
+@import '../variables';
+
+section.coming-soon {
+    .wrapper {
+        @include flex(center, center, row);
+        height: 300px;
+
+        .content {
+            h1 {
+                color: $black;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media #{$large} {
+    section.coming-soon {
+        .wrapper {
+            height: 500px;
+        }
+    }
+}

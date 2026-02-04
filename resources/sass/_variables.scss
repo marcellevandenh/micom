@@ -1,0 +1,138 @@
+// Fonts
+
+@mixin primary($fw: 400, $fs: 1rem, $c: $black) {
+    font: {
+        family: "NAME OF FONT", sans-serif;
+        weight: $fw;
+        size: $fs;
+    }
+    color: $c;
+    line-height: 1.3;
+}
+
+// Helpers
+
+@mixin flex($ai: auto, $jc: auto, $fd: auto, $fw: auto) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+}
+
+@mixin grid($gtc: auto, $cg: auto, $rg: auto) {
+    display: grid;
+    grid-template-columns: $gtc;
+    column-gap: $cg;
+    row-gap: $rg;
+}
+
+@mixin svg-size($w, $h:$w) {
+    width: $w;
+    height: $h;
+    min-width: $w;
+    min-height: $h;
+}
+
+@mixin pos-abs($t: 0, $l: 0) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin pos-fix($t: 0, $l: 0) {
+    position: fixed;
+    top: $t;
+    left: $l;
+}
+
+@mixin has-bg-img() {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    > * {
+        @include bg-img();
+    }
+}
+
+@mixin bg-img($fit: cover, $position: top) {
+    @include pos-abs();
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+    object-position: $position;
+}
+
+@mixin btn() {
+    all: unset;
+    @include primary(400, 1rem, $white);
+    @include flex($fd: row, $ai: center);
+    gap: 8px;
+    line-height: 1.3;
+    background: $black;
+    padding: 16px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &.btn-outline {
+        @include primary(400, 1rem, $black);
+        background: transparent;
+        border: solid 1px $black;
+    }
+
+    &:hover {
+        color: $white;
+        background: rgba($black, .5);
+    }
+}
+
+@mixin svg-list($type: 0, $gap: 10px, $width: 20px, $height: $width) {
+    @include flex($fd: column);
+    gap: 23px;
+    margin: 19px 0;
+
+    li {
+        @include flex(center);
+        list-style-type: none;
+        position: relative;
+        padding-left: $width + $gap;
+        margin-left: 0;
+
+        &:before {
+            @include pos-abs();
+            content: "";
+            top: 2px;
+            width: $width;
+            height: $height;
+            background-size: $width $height;
+
+            @if $type {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22.415' height='22.025' viewBox='0 0 22.415 22.025'%3E%3Cg id='Icon_feather-check-circle' data-name='Icon feather-check-circle' transform='translate(-1.998 -1.979)'%3E%3Cpath id='Path_879' data-name='Path 879' d='M23,12.076V13a10,10,0,1,1-5.93-9.139' transform='translate(0 0)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='Path_880' data-name='Path 880' d='M27.309,6,16.687,16.633,13.5,13.446' transform='translate(-4.31 -0.878)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+            } 
+            @else {
+                @error "Unknown type: #{$direction}.";
+            }
+        }
+    }
+}
+
+// Variables
+
+$small: "only screen and (min-width: 500px)";
+$medium: "only screen and (min-width: 601px)";
+$large: "only screen and (min-width: 992px)";
+$x-large: "only screen and (min-width: 1200px)";
+$xx-large: "only screen and (min-width: 1536px)";
+
+$nav-height-sm: 75px;
+$nav-height-lg: 100px;
+
+$black:#000;
+$white:#FFF;
+$grey: #ececec;
+$brandLight: #AFCA0B;
+$brand: #3AAA35;
+$brandDark: #035431;

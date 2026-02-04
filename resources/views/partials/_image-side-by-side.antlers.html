@@ -1,0 +1,19 @@
+<section class="image-side-by-side">
+    <div class="wrapper">
+        <div class="image">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="{{ glide:left_image width='1300' }}" type="image/webp">
+                <source media="(max-width: 1199px)" srcset="{{ glide:left_image width='900' }}" type="image/webp">
+                <img loading="lazy" src="{{ left_image }}" width="100%" height="100%" alt="{{ left_image:alt }}">
+            </picture>
+        </div>
+
+        <div class="image">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="{{ glide:right_image width='1300' }}" type="image/webp">
+                <source media="(max-width: 1199px)" srcset="{{ glide:right_image width='900' }}" type="image/webp">
+                <img loading="lazy" src="{{ right_image }}" width="100%" height="100%" alt="{{ right_image:alt }}">
+            </picture>
+        </div>
+    </div>
+</section>

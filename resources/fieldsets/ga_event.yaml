@@ -1,0 +1,30 @@
+title: 'GA Event'
+fields:
+  -
+    handle: event_name
+    field:
+      input_type: text
+      default: generate_lead
+      antlers: false
+      type: text
+      display: 'Event Name'
+      instructions: |-
+        The text name (letters and underscores only) of the GA event name to be recorded on a successful submission eg form_enquiry.
+
+        Fired if ?success=true is passed to this page url
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: event_value
+    field:
+      type: float
+      display: 'Event Value'
+      instructions: 'Conversion event value in GA'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

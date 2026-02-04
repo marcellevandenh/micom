@@ -1,0 +1,76 @@
+title: 'Cookie Report'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: cookie_script
+            field:
+              max_sets: 1
+              type: replicator
+              display: 'Cookie Script'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    cookie_script:
+                      display: 'Cookie Script'
+                      fields:
+                        -
+                          handle: content
+                          field:
+                            buttons:
+                              - h1
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Content
+                        -
+                          handle: report_title
+                          field:
+                            type: text
+                            display: 'Report Title'
+                        -
+                          handle: cookie_report_script
+                          field:
+                            type: code
+                            display: 'Cookie Report Script'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

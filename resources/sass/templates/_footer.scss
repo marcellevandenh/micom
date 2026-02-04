@@ -1,0 +1,75 @@
+@import '../variables';
+
+footer {
+    .top {
+        padding: 0 16px;
+        
+        .wrapper {
+            @include flex(center, center, column);
+            gap: 16px;
+        }
+    }
+
+    .bottom {
+        padding: 16px;
+
+        .wrapper {
+            @include flex(center, space-between, $fd: column);
+            gap: 15px;
+            
+            .copyright {
+                @include primary(400, 1rem, $black);
+                margin-bottom: 0;
+            }
+    
+            .surge {
+                @include flex(center, $fd: column);
+                gap: 6px;
+    
+                * {
+                    @include primary(400, 1rem, $black);
+                    margin-bottom: 0;
+                }
+    
+                > a, svg {
+                    @include svg-size(110px, 28px);
+
+                    path {
+                        transition: all .3s ease;
+                    }
+    
+                    &:hover {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $medium } {
+    footer {
+        .bottom {
+            padding: 16px 32px;
+
+            .wrapper {
+                .surge {
+                    @include flex(center, center, $fd: row);
+                }
+            }
+        }
+    }
+}
+
+
+@media #{ $large } {
+    footer {
+        .bottom {
+            .wrapper {
+                flex-direction: row;
+            }
+        }
+    }
+}

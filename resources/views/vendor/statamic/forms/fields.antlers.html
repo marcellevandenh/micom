@@ -1,0 +1,13 @@
+<div class="fields">
+    {{ fields }}
+        <div class="field">
+            <label for="{{ field:handle }}">{{ display }}{{ if field:required }}*{{ endif }}</label>
+
+            {{ field }}
+
+            {{ if error }}
+                <p class="error">{{ error }}</p>
+            {{ endif }}
+        </div>
+    {{ /fields }}
+</div>

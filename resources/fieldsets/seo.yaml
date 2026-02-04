@@ -1,0 +1,52 @@
+title: SEO
+fields:
+  -
+    handle: meta_title
+    field:
+      type: text
+      display: 'Meta Title'
+  -
+    handle: meta_description
+    field:
+      type: textarea
+      display: 'Meta Description'
+  -
+    handle: sharing_image
+    field:
+      container: assets
+      type: assets
+      display: 'Sharing Image'
+      instructions: 'This image will be used for when people share this page on social media. If left blank it will use the image from <a href="/cp/globals/company_info" target="_blank">here.</a>'
+  -
+    handle: noindex_page
+    field:
+      type: toggle
+      display: 'No-Index Page'
+      width: 50
+  -
+    handle: canonical_tag
+    field:
+      type: text
+      display: 'Canonical Tag'
+      width: 50
+  -
+    handle: schema_instructions
+    field:
+      type: section
+      display: 'Schema Instructions'
+      instructions: 'Please note that the script tags are automatically added. Only the JSON input is needed.'
+  -
+    handle: schema
+    field:
+      type: code
+      display: Schema
+  -
+    handle: stylesheets
+    field:
+      type: code
+      display: Stylesheets
+  -
+    handle: scripts
+    field:
+      type: code
+      display: Scripts

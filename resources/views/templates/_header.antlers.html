@@ -1,0 +1,77 @@
+<header>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                {{ if company_info:logo }}
+                    <a href="/">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="{{ glide:company_info:logo height='142' }}" type="image/webp">
+                            <source media="(max-width: 1199px)" srcset="{{ glide:company_info:logo height='100' }}" type="image/webp">
+                            <img src="{{ company_info:logo }}" width="{{ company_info:logo:width }}" height="{{ company_info:logo:height }}" alt="{{ company_info:logo:alt }}">
+                        </picture>
+                    </a>
+                {{ endif }}
+            </div>
+        
+            <div class="inner">
+                <div class="mob-nav">
+                    <!-- {{ if company_info:phone_number }}
+                        <a href="tel:{{ company_info:phone_number }}" class="phone">
+                            <svg aria-labelledby="nav_phone" role="img" xmlns="http://www.w3.org/2000/svg" width="28.867" height="28.867" viewBox="0 0 28.867 28.867">
+                                <title id="nav_phone">Call Us</title>
+                                <g id="ic_phone_48px" transform="translate(-6 -6)">
+                                    <path id="Path_217" data-name="Path 217" d="M11.813,18.5a24.152,24.152,0,0,0,10.568,10.56l3.528-3.536a1.609,1.609,0,0,1,1.628-.393,18.256,18.256,0,0,0,5.725.914,1.6,1.6,0,0,1,1.6,1.6v5.613a1.6,1.6,0,0,1-1.6,1.6A27.261,27.261,0,0,1,6,7.6,1.6,1.6,0,0,1,7.6,6h5.613a1.6,1.6,0,0,1,1.6,1.6,18.256,18.256,0,0,0,.914,5.725,1.609,1.609,0,0,1-.393,1.628Z" fill="#000"/>
+                                </g>
+                            </svg>
+                        </a>
+                    {{ endif }} -->
+    
+                    <div class="burger">
+                        <div class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="menu accordion-container">
+                    {{ nav handle="header_navigation" }}
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                                {{ if url }}
+                                    <a href="{{ url }}">{{ title }}</a>
+                                {{ else }}
+                                    <p>{{ title }}</p>
+                                {{ endif }}
+    
+                                {{ if children }}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10.549" height="16.626" viewBox="0 0 10.549 16.626">
+                                        <g id="ic_keyboard_arrow_down_24px" transform="translate(0 16.626) rotate(-90)">
+                                        <path id="Path_7" data-name="Path 7" d="M7.954,7.84l6.36,6.52,6.36-6.52,1.954,2.007-8.313,8.542L6,9.847Z" transform="translate(-6 -7.84)" fill="#fff"/>
+                                        </g>
+                                    </svg>
+                                {{ endif }}
+                            </div>
+    
+                            {{ if children }}
+                                <div class="panel">
+                                    {{ children }}
+                                        <div class="child">
+                                            {{ if url }}
+                                                <a href="{{ url }}">{{ title }}</a>
+                                            {{ else }}
+                                                <p>{{ title }}</p>
+                                            {{ endif }}
+                                        </div>
+                                    {{ /children }}
+                                </div>
+                            {{ endif }}
+                        </div>
+                    {{ /nav }}
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

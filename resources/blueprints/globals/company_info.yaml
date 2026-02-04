@@ -1,0 +1,113 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Logos
+        fields:
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Logo
+              width: 50
+          -
+            handle: footer_logo
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Footer logo'
+              width: 50
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Favicon
+      -
+        display: Details
+        fields:
+          -
+            handle: phone_number
+            field:
+              input_type: tel
+              type: text
+              display: 'Phone Number'
+              default: '1234'
+          -
+            handle: email_address
+            field:
+              input_type: email
+              type: text
+              display: 'Email Address'
+      -
+        display: Socials
+        fields:
+          -
+            handle: main_sharing_image
+            field:
+              container: assets
+              type: assets
+              display: 'Main Sharing Image'
+              instructions: 'This image will be used when your website is shared across social platforms. If you would like to change this per page, you can within the SEO tab on that page.'
+          -
+            handle: socials
+            field:
+              type: grid
+              display: Socials
+              fields:
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Icon
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - required
+      -
+        display: Legal
+        fields:
+          -
+            handle: copyright
+            field:
+              default: '© Surge Starter Kit'
+              type: text
+              display: Copyright
+          -
+            handle: privacy_policy
+            field:
+              buttons:
+                - bold
+                - italic
+                - removeformat
+                - anchor
+              remove_empty_nodes: false
+              type: bard
+              display: 'Privacy Policy'

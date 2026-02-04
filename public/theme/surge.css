@@ -1,0 +1,351 @@
+:root {
+    /* New Branding */
+    --grey300: #E6E6E7;
+    --grey500: #ADAEB3;
+    --grey700: #3B3B3E;
+    --grey800: #252527;
+    --grey900: #0F0F10;
+    --lightgreen: #A9DC43;
+    --green: #3AAA35;
+    --darkorange: #d67000;
+
+    /* Corporate Colours */
+    --lightBlack: #0F0F10;
+    --white:#FFF;
+    --blueGrey: #5f7884;
+
+    /* Solid Colours */
+    --orange: #EF7D00;
+    --lightOrange: #ffb666;
+    --yellow: #FFCC00;
+    --red: #D51317;
+    --darkRed: #ad0f12;
+    --pink: #E6007E;
+    --lightPurple: #763F91;
+    --darkPurple: #362071;
+    --lightBlue: #7CCBE0;
+    --blue: #0069B4;
+    --darkBlue: #213B87;
+    --darkTurqoise: #0091AD;
+    --darkGreen: #267422;
+    --lightGrey: #ECF0F1;
+    --grey: #A9BBC0;
+}
+
+/* ----------- */
+/* START Login */
+/* ----------- */
+
+.outside {
+    background: linear-gradient(-45deg, var(--green), var(--lightgreen));
+}
+
+.outside::after {
+    content: '';
+    background: url(/background-dots.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.outside #statamic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.outside #statamic .logo {
+    padding-top: 0 !important;
+    filter: brightness(0) contrast(0.8);
+}
+
+.outside #statamic .logo + div .card {
+    background: var(--grey800);
+}
+
+.outside #statamic .logo + div .card form label {
+    color: var(--white);
+}
+
+.outside #statamic .logo + div .card div h1 {
+    font-weight: 700;
+}
+
+.outside #statamic .logo + div .card div h1,
+.outside #statamic .logo + div .card div p {
+    color: var(--white) !important;
+}
+
+.outside .white-label-logo {
+    max-width: 200px;
+}
+
+/* If there is no logo present make the Statmic SVG white */
+.logo svg path {
+    fill: var(--white);
+}
+
+/* --------- */
+/* END Login */
+/* --------- */
+
+/* ------------------- */
+/* START Button Styles */
+/* ------------------- */
+
+.btn-primary {
+    box-shadow: inset 0 1px var(--green),0 1px #191e230d,0 3px 2px -1px #17508026,0 0 0 0 transparent !important;
+    border-color: var(--green) !important;
+    background: var(--green) !important;
+}
+
+.btn-primary:hover:not(:disabled), .btn-primary :active:not(:disabled),
+.btn-primary:hover {
+    box-shadow: inset 0 1px var(--darkGreen),0 1px #191e230d,0 3px 2px -1px #17508026,0 0 0 0 transparent !important;
+    border-color: var(--darkGreen) !important;
+    background: var(--darkGreen) !important;
+}
+
+.btn-primary:disabled {
+    color: var(--white) !important;
+}
+
+button.warning, 
+a.warning {
+    color: var(--red) !important;
+}
+
+button.warning:hover, 
+a.warning:hover {
+    background: var(--red) !important;
+    color: var(--white) !important;
+}
+
+/* Remove the blue focus */
+[class^="btn"]:focus, [class*=" btn"]:focus,
+.btn:focus, .btn-default:focus {
+    box-shadow: 0 0 0 0 transparent;
+    border-color: var(--green);
+}
+
+/* ----------------- */
+/* END Button Styles */
+/* ----------------- */
+
+/* ------------------- */
+/* START Header Styles */
+/* ------------------- */
+
+.global-header {
+    background: var(--grey800);
+}
+
+.global-search {
+    background: var(--white);
+}
+
+/* Hide the light/dark theme selector */
+.head-link .dropdown-list:first-child {
+    display: none;
+}
+
+.icon-header-avatar {
+    background: var(--green);
+}
+
+/* ----------------- */
+/* END Header Styles */
+/* ----------------- */
+
+/* ---------------- */
+/* START Nav Styles */
+/* ---------------- */
+
+.nav-main {
+    background: linear-gradient(-45deg, var(--grey900), var(--grey800));
+}
+
+.nav-toggle svg {
+    color: var(--green);
+}
+
+.nav-main-inner ul li a {
+    color: var(--white);
+}
+
+.nav-main li.current a i {
+    background: var(--green);
+}
+
+.nav-main li.current a i svg {
+    color: var(--white);
+    padding: 1px;
+}
+
+.nav-main li a:hover,
+.nav-main li.current > a,
+.nav-main-inner h6 {
+    color: var(--green);
+}
+
+.nav-main li ul li a {
+    color: var(--grey);
+}
+
+/* -------------- */
+/* END Nav Styles */
+/* -------------- */
+
+/* ------------------- */
+/* START Field Styling */
+/* ------------------- */
+
+.input-group:not(.focus-within-only):focus, 
+.input-group:not(.focus-within-only):focus-within {
+    outline-color: var(--green) !important;
+    outline-offset: 0 !important;
+    box-shadow: 0 0 0 2px var(--green) !important;
+}
+
+.vs__dropdown-toggle:focus,
+.vs__dropdown-toggle:focus-within,
+.input-text:focus,
+.input-text:focus-within {
+    box-shadow: 0 0 2px var(--green) !important;
+    outline-color: var(--green) !important;
+    outline-offset: 0 !important;
+}
+
+/* ----------------- */
+/* END Field Styling */
+/* ----------------- */
+
+/* -------------------- */
+/* START Generic Styles */
+/* -------------------- */
+
+/* Main background */
+body {
+    background: var(--lightGrey);
+}
+
+body::before {
+    content: '';
+    background: url(/background-dots.svg) no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    bottom: 0;
+    right: 0;
+}
+
+/* Boxes on dashboard page */
+.super-btn h3 {
+    color: var(--green);
+}
+
+/* Profile icon links */
+.dropdown-list .popover-content button:hover, 
+.dropdown-list .popover-content a:hover {
+    background: var(--green);
+}
+
+/* Links in tables like collections */
+a:not([class^="btn"]):hover {
+    color: var(--green);
+}
+
+/* Table sort headings */
+.data-table .sortable-column:hover {
+    color: var(--green);
+}
+
+/* Rotating dots on entries */
+.rotating-dots-button:focus {
+    box-shadow: 0 0 0 0 transparent;
+    border-color: var(--green);
+}
+
+/* Pill tabs above tables */
+.pill-tab.active {
+    background: var(--green);
+    color: var(--white);
+}
+
+/* Draft/Published pill on entries */
+.status-index-field {
+    background: var(--lightGrey);
+    color: var(--grey800);
+}
+.status-index-field.status-published:not(.status-private) {
+    background: var(--lightgreen);
+    color: var(--grey800);
+}
+
+/* Asset editor */
+.\@container\/toolbar,
+.asset-editor .editor-preview .editor-preview-image {
+    background: var(--blueGrey);
+}
+
+/* Tab buttons on entry */
+.tab-button.active {
+    color: var(--green) !important;
+    border-color: var(--green) !important;
+}
+
+/* Toggles */
+.toggle-container.on .toggle-knob:focus {
+    box-shadow: 0 0 10px var(--green);
+}
+
+.toggle-fieldtype-wrapper:focus-within .toggle-container {
+    box-shadow: 0 0 2px var(--green) !important;
+    outline-color: var(--green) !important;
+    outline-offset: 0 !important;
+}
+
+.toggle-container.on {
+    border-color: var(--green) !important;
+    background: var(--green) !important;
+}
+
+/* Small icons when entries are included in page builder */
+.icon-status.published, .little-dot.published {
+    background: var(--green);
+}
+
+.bg-pink {
+    background: var(--green) !important;
+}
+
+.bg-green-600 {
+    background: var(--green) !important;
+}
+
+.bg-red-500 {
+    background: var(--red) !important;
+}
+
+.fixed .bg-gray-800 {
+    background: var(--blueGrey) !important;
+    color: var(--white) !important;
+}
+
+div .text-blue, div .text-blue-400 {
+    color: var(--green) !important;
+}
+
+.tabs-container {
+    border-bottom-width: 0;
+}

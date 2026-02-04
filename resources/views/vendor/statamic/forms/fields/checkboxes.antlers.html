@@ -1,0 +1,20 @@
+{{ foreach:options as="value|label" }}
+    <label>
+        <input
+            type="checkbox"
+            name="{{ handle }}[]"
+            id="{{ handle }}"
+            value="{{ value }}"
+            {{ if js_driver }}{{ js_attributes }}{{ /if }}
+            {{ if (old | in_array:value) }}checked{{ /if }}
+            {{ if ! old && value === default }}checked{{ /if }}
+            {{ if validate|contains:required }}required{{ /if }}
+        >
+        {{ label !== null ? label : value }}
+
+        <span class="checkmark"></span>
+    </label>
+    {{ unless inline }}
+        <br>
+    {{ /unless }}
+{{ /foreach:options }}

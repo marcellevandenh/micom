@@ -1,0 +1,15 @@
+title: Blog
+template: templates/blog/show
+layout: layout
+mount: 8b0e75f0-99c6-4a0f-9128-feb1de5ec6c7
+revisions: false
+route: '/{mount}/{slug}'
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

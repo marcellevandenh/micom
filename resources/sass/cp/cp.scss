@@ -1,0 +1,102 @@
+@import './variables';
+
+* {
+    border: 0 solid $borderColor;
+
+
+}
+
+body {
+    background-color: $darkerBackgroundColor
+}
+
+.outside {
+    background-color: $darkerBackgroundColor;
+}
+
+
+.grid-item-header{
+    background-color: $darkerBackgroundColor;
+}
+
+.bg-grey-10, .bg-grey-20 {
+    background-color: $darkerBackgroundColor !important;
+}
+
+
+
+.global-header {
+    background-color: $lightBackgroundColor
+}
+
+.nav-main {
+    background-color: $lightBackgroundColor
+}
+
+.data-table tbody tr:hover {
+    background-color: $lightBackgroundColor
+}
+
+.dropdown-list .popover-content a:hover{
+    background-color: $lightBackgroundColor
+}
+
+.input-text, input.slug:focus, input.slug:hover {
+    background-color: $lightBackgroundColor !important;
+}
+
+.assets-fieldtype .assets-fieldtype-picker
+{
+    background-color: $lightBackgroundColor !important;
+}
+
+.blueprint-section-field .blueprint-section-field-inner {
+    background-color: $lightBackgroundColor !important;
+}
+
+.btn-primary {
+    background: $lightBackgroundColor;
+    border: 1px solid $borderColor;
+    color: $accentColor;
+    box-shadow: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: $darkerBackgroundColor;
+    border: 1px solid $borderColor;
+    color: $accentColor;
+    box-shadow: none;
+}
+
+
+
+
+
+
+.rotating-dots-button:focus {
+    box-shadow: 0 0 0 0.2rem $accentColor;
+}
+
+a:hover {
+    color: $accentColor !important;
+}
+
+.text-blue {
+    color: $accentColor !important;
+}
+
+.data-table .sortable-column:hover {
+    color: $accentColor !important;
+}
+
+.icon-user-initials {
+    background-color: $accentColor;
+}
+
+.bg-pink {
+    background-color: $accentColor !important;
+}
+
+.upload-text-button {
+    color: $accentColor !important;
+}

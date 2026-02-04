@@ -1,0 +1,15 @@
+title: Plugins
+data:
+  staging_scripts:
+    code: |-
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7JSCB458V"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K7JSCB458V');
+      </script>
+    mode: htmlmixed
+  staging_ga_id: G-K7JSCB458V

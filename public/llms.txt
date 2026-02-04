@@ -1,0 +1,3 @@
+# llms.txt – Guidance for Large Language Models
+# Website: https://surge-online.co.uk/
+# This file provides directives for AI bots and LLMs regarding content access and usage.

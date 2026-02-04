@@ -1,0 +1,95 @@
+@import '../variables';
+
+.share {
+    @include flex(center, flex-start, row);
+    gap: 8px;
+    margin-bottom: 5em;
+
+    p {
+        @include primary(400, 1rem !important, $black);
+    }
+
+    .icons {
+        @include flex($jc: flex-start, $fd: row);
+        align-items: center;
+
+        a {
+            position: relative;
+
+            &:hover {
+                &.twitter {
+                    div {
+                        transform: scale(1.2);
+
+                        svg {
+                            transform: scale(1);    
+                        }
+                    }
+                }
+
+                svg {
+                    transform: scale(1.2);
+                }
+            }
+
+            &.whatsapp {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &.twitter {
+                div {
+                    background: $black;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    padding: 7px;
+                    margin-right: 10px;
+                    transition: all 0.3s;
+
+                    svg {
+                        width: 100% !important;
+                        height: 100% !important;
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+
+            svg {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                transition: all 0.3s;
+            }
+
+            .copied {
+                @include flex($jc: flex-start, $fd: row);
+                background: $brand;
+                padding: 0.2em 0.5em;
+                border-radius: 5px;
+                align-items: center;
+                position: absolute;
+                top: -50px;
+                width: 130px;
+                left: -55px;
+                opacity: 0;
+                transition: all 0.5s;
+                z-index: 999;
+
+                svg {
+                    width: 15px;
+
+                    path {
+                        fill: $white;
+                    }
+                }
+
+                p {
+                    @include primary( 400, 1rem, $white );
+                }
+            }
+        }
+    }
+}

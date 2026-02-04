@@ -1,0 +1,46 @@
+{
+    "name": "surgems/redirect-urls",
+    "description": "Statamic Addon that redirects URLs.",
+    "version": "2.1.4",
+    "latestVersion": "2.1.4",
+    "keywords": [
+        "surgems",
+        "statamic",
+        "redirects"
+    ],
+    "homepage": "https://github.com/surgems/package-development",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Surge Marketing Solutions",
+            "email": "help@surgems.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Surgems\\RedirectUrls\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "statamic": {
+            "name": "Redirect Urls",
+            "description": "Statamic Addon that redirects URLs."
+        },
+        "laravel": {
+            "providers": [
+                "Surgems\\RedirectUrls\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "spatie/simple-excel": "^3.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10"
+    }
+}

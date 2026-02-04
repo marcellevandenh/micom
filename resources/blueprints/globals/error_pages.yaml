@@ -1,0 +1,33 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: '404'
+        fields:
+          -
+            handle: not_found
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    not_found:
+                      display: 'Not Found'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: page_builder
+              type: replicator
+              display: 'Not Found'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false

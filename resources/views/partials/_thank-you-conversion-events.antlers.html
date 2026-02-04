@@ -1,0 +1,81 @@
+
+<section class="thank-you-conversion-events">
+
+
+{{ if get:success=="true" }}
+
+    {{ if get:source }}
+        {{ event_source =  get:source }}
+
+    {{ else }}
+        {{ event_source =  "website-form" }}
+
+    {{ /if }}
+
+ {{ if event_name }}
+
+        <script>
+
+                    try {
+                        window.addEventListener('load', (event) => {
+
+                                setTimeout(function() {
+
+                            if (typeof gtag !== 'undefined') {
+                                console.log("Using gtag");
+                            } else {
+                                console.log("Creating gtag");
+                                window.dataLayer = window.dataLayer || [];
+
+                                function gtag() {
+                                    window.dataLayer.push(arguments);
+                                }
+                            }
+
+
+                            gtag('js', new Date());
+                            {{ if environment == 'staging' }}
+                                gtag('config', '{{ plugins:staging_ga_id }}');
+                            {{ elseif environment == 'production' }}
+                                gtag('config', '{{ plugins:live_ga_id }}');
+                            {{ /if }}
+                            gtag('event', '{{ event_name }}', {
+                                {{ if event_value }}
+                                    currency: "USD",
+                                    value: '{{ event_value }}',
+                                {{ /if }}
+                                lead_source: '{{ event_source }}'
+                            });
+                            console.log('Gtag Event {{ event_name }}  - {{ event_source }} sent');
+
+
+                            {{ if event_value }}
+                                if (typeof fbq != 'undefined') {
+                                    fbq('track', 'Purchase', {value: '{{ event_value }}', currency: 'USD'});
+                                    console.log('FBQ Event Purchase sent');
+                                }
+
+                            {{ else }}
+                                if (typeof fbq != 'undefined') {
+                                    fbq('track', 'Lead');
+                                    console.log('FBQ Event Lead sent');
+                                }
+
+                            {{ /if }}
+
+
+
+
+                                }, 2500);
+
+                        });
+                    } catch (ex) {
+                        console.log('Exception: ' + ex.message);
+                    }
+
+        </script>
+
+ {{  /if }}
+{{  /if }}
+
+</section>

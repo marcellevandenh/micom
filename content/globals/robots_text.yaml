@@ -1,0 +1,6 @@
+title: 'Robots Text'
+data:
+  robots_contents: |-
+    User-agent: *
+    Allow: /
+    Sitemap: https://www.examplesite.com/sitemap.xml

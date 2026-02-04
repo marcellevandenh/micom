@@ -1,0 +1,249 @@
+@use "sass:math";
+@import '../variables';
+
+header {
+    @include pos-fix();
+    width: 100%;
+    height: $nav-height-sm;
+    z-index: 99999 !important;
+
+    nav {
+        @include pos-abs();
+        @include flex(center, space-between);
+        gap: 20px;
+        height: $nav-height-sm;
+        width: 100%;
+        background: $white;
+        padding: 0 16px;
+        box-shadow: 0 0 20px 1px rgb(0 0 0 / 25%);
+
+        .wrapper {
+            @include flex(center, space-between);
+            gap: 20px;
+        }
+
+        .logo, .logo img {
+            @include svg-size(fit-content, 50px);
+        }
+
+        .inner {
+            width: fit-content;
+
+            .mob-nav {
+                @include flex(center);
+                gap: 20px;
+
+                .phone, .phone svg {
+                    @include svg-size(29px);
+                }
+
+                .burger {
+                    $width: 37px;
+                    $height: 28px;
+                    $spanHeight: 5px;
+                    $midSpanTop: math.div($height - $spanHeight, 2);
+                    $color: $black;
+
+                    .burger-icon {
+                        width: $width;
+                        height: $height;
+                        position: relative;
+                        transform: rotate(0deg);
+                        transition: .5s ease-in-out;
+    
+                        span {
+                            display: block;
+                            position: absolute;
+                            height: $spanHeight;
+                            width: $width;
+                            background: $color;
+                            left: 0;
+                            transform: rotate(0deg);
+                            transition: .25s ease-in-out;
+                            border-radius: 5px;
+    
+                            &:nth-child(1) {
+                                top: 0;
+                            }
+    
+                            &:nth-child(2), &:nth-child(3) {
+                                top: $midSpanTop;
+                            }
+    
+                            &:nth-child(4) {
+                                top: $height - $spanHeight;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        .burger-icon {
+                            span {
+                                &:nth-child(1), &:nth-child(4) {
+                                    top: $midSpanTop;
+                                    width: 0%;
+                                    left: 50%;
+                                }
+    
+                                &:nth-child(2) {
+                                    transform: rotate(45deg);
+                                    width: $width;
+                                }
+    
+                                &:nth-child(3) {
+                                    transform: rotate(-45deg);
+                                    width: $width;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menu {
+                @include pos-fix(calc((-100vh + $nav-height-sm*2)));
+                width: 100%;
+                height: calc(100vh - $nav-height-sm);
+                background: $black;
+                z-index: -1;
+                transition: top .5s ease-out, left .5s ease-out;
+                padding: 50px 52px 91px;
+                overflow: scroll;
+
+                &.active {
+                    top: $nav-height-sm;
+                }
+
+                .accordion-wrapper {
+                    border: none;
+
+                    * {
+                        @include primary(600, 1.25rem, $white);
+                    }
+
+                    .accordion {
+                        justify-content: flex-start;
+                        gap: 17px;
+                        padding: 17px 0;
+                        cursor: pointer;
+
+                        svg {
+                            @include svg-size(11px, auto);
+                        }
+                    }
+
+                    .panel {
+                        padding-left: 24px;
+
+                        .child {
+                            padding: 14px 0;
+                        }
+                    }
+                }
+
+                .copyright {
+                    @include primary($c: $white);
+                    margin-top: 103px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$small} {
+    header {
+        nav {
+            .inner {
+                .menu {
+                    max-width: 425px;
+                    top: $nav-height-sm;
+                    left: -425px;
+    
+                    &.active {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$x-large} {
+    header {
+        height: $nav-height-lg;
+    
+        nav {
+            height: $nav-height-lg;
+    
+            .logo, .logo img {
+                @include svg-size(fit-content, 71px);
+            }
+    
+            .inner {
+                .mob-nav {
+                    display: none;
+                }
+    
+                .menu {
+                    @include flex();
+                    gap: 10px;
+                    position: static;
+                    max-width: none;
+                    height: fit-content;
+                    z-index: 1;
+                    transition: none;
+                    padding: 0;
+                    overflow: visible;
+                    background: unset;
+    
+                    .accordion-wrapper {
+                        &.open {
+                            .panel {
+                                top: $nav-height-lg;
+                            }
+                        }
+    
+                        .accordion {
+                            gap: 8px;
+                            padding: 5px 1.35vw;
+
+                            * {
+                                @include primary(600, 1rem !important, $black);
+                            }
+                        }
+    
+                        .panel {
+                            @include pos-fix(-86px);
+                            @include flex(center, space-around);
+                            width: 100%;
+                            height: 86px;
+                            max-height: fit-content;
+                            background: $black;
+                            padding: 0 5vw;
+                            transition: top .25s ease-in;
+                            z-index: -1;
+    
+                            .child {
+                                padding: 0;
+
+                                * {
+                                    padding: 15px;
+                                }
+
+                                a {
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .copyright {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

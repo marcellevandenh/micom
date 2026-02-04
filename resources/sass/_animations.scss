@@ -1,0 +1,38 @@
+// Reveal Animation
+
+.reveal {
+    &.fade-in {
+        transition: opacity .5s linear;
+
+        &:not(.revealed) {
+            opacity: 0;
+        }
+    }
+
+    &.reveal-bottom {
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+
+        &:not(.revealed) {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+    }
+
+    &.reveal-left {
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+
+        &:not(.revealed) {
+            transform: translateX(-25px);
+            opacity: 0;
+        }
+    }
+
+    &.reveal-right {
+        transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+
+        &:not(.revealed) {
+            transform: translateX(25px);
+            opacity: 0;
+        }
+    }
+}

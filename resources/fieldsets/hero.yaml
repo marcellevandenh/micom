@@ -1,0 +1,43 @@
+title: Hero
+fields:
+  -
+    handle: hero
+    field:
+      collapse: false
+      previews: true
+      max_sets: 1
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            hero:
+              display: Hero
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: content
+                  field:
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    smartypants: false
+                    restrict: false
+                    antlers: false
+                    type: markdown
+                    display: Content
+                    icon: markdown
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: replicator
+      display: Hero
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

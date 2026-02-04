@@ -1,0 +1,70 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Live
+        fields:
+          -
+            handle: live_scripts
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Live Scripts'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: live_ga_id
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Live GA ID'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Staging
+        fields:
+          -
+            handle: staging_scripts
+            field:
+              theme: material
+              mode: htmlmixed
+              mode_selectable: true
+              indent_type: tabs
+              indent_size: 4
+              key_map: default
+              line_numbers: true
+              line_wrapping: true
+              antlers: false
+              type: code
+              display: 'Staging Scripts'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: staging_ga_id
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Staging GA ID'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

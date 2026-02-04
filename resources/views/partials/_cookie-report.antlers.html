@@ -1,0 +1,9 @@
+{{ cookie_script }}
+    <section class="cookie-report">
+        <div class="wrapper">
+            {{ content ? content : '' }}
+            {{ report_title ? '<h2>{ report_title }</h2>' : '' }}
+            {{ cookie_report_script ? cookie_report_script : '' }}
+        </div>
+    </section>
+{{ /cookie_script }}

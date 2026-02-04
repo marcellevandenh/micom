@@ -1,0 +1,15 @@
+<div class="file">
+    <label for="{{ handle }}" data-for="{{ handle }}" class="file-upload">
+        BROWSE FILES
+        <input
+            type="file"
+            id="{{ handle }}"
+            name="{{ handle }}{{ if max_files !== 1 }}[]{{ /if }}"
+            {{ if js_driver }}{{ js_attributes }}{{ /if }}
+            {{ if max_files !== 1 }}multiple{{ /if }}
+            {{ if validate|contains:required }}required{{ /if }}
+        >
+    </label>
+
+    <p id="{{ handle }}-name"></p>
+</div>

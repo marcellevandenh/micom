@@ -1,0 +1,14 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: robots_contents
+            field:
+              type: textarea
+              display: 'Robots Contents'
+              instructions: |-
+                <p>Please note that the current robots.txt file will be overwritten when you click 'Save'.</p>
+                <p>Make sure you are <strong>100% certain the changes you are making are correct</strong>.</p>

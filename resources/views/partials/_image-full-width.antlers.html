@@ -1,0 +1,11 @@
+<section class="image-full-width">
+    <div class="wrapper">
+        <div class="image">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="{{ glide:image width='1300' }}" type="image/webp">
+                <source media="(max-width: 1199px)" srcset="{{ glide:image width='900' }}" type="image/webp">
+                <img loading="lazy" src="{{ image }}" width="100%" height="100%" alt="{{ image:alt }}">
+            </picture>
+        </div>
+    </div>
+</section>

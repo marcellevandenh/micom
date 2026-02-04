@@ -1,0 +1,94 @@
+title: Video
+fields:
+  -
+    handle: video
+    field:
+      max_sets: 1
+      type: replicator
+      display: Video
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            video:
+              display: Video
+              fields:
+                -
+                  handle: embed_video
+                  field:
+                    type: toggle
+                    display: 'Embed Video'
+                -
+                  handle: embed_code
+                  field:
+                    type: text
+                    display: 'Embed Code'
+                    if:
+                      embed_video: 'equals true'
+                -
+                  handle: thumbnail
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Thumbnail
+                    width: 50
+                    unless:
+                      embed_video: 'equals true'
+                -
+                  handle: mp4
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: MP4
+                    width: 50
+                    unless:
+                      embed_video: 'equals true'
+                -
+                  handle: hvc1
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: HVC1
+                    width: 50
+                    unless:
+                      embed_video: 'equals true'
+                -
+                  handle: webm
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: WebM
+                    width: 50
+                    unless:
+                      embed_video: 'equals true'
+                -
+                  handle: autoplay
+                  field:
+                    type: toggle
+                    display: Autoplay
+                    width: 33
+                    if:
+                      embed_video: 'equals false'
+                    instructions: 'Allows the video to autoplay'
+                -
+                  handle: loop
+                  field:
+                    type: toggle
+                    display: Loop
+                    width: 33
+                    if:
+                      embed_video: 'equals false'
+                    instructions: 'If autoplay is enabled this is recommended for a continuous.'
+                -
+                  handle: muted
+                  field:
+                    type: toggle
+                    display: Muted
+                    width: 33
+                    if:
+                      embed_video: 'equals false'
+                    instructions: 'If autoplay is enabled this must be enabled to work on mobiles.'

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <title>{{ meta_title or title }} | {{ site:name }}</title>
+        {{ partial:templates/seo }}
+
+        {{ vite src="resources/sass/app.scss|resources/css/site.css" }}
+        {{ stack:styles }}
+    </head>
+
+    <body>
+        {{ partial:templates/header }}
+
+        <main>
+            {{ template_content }}
+        </main>
+
+        {{ partial:templates/footer }}
+
+        {{ vite src="resources/js/site.js|resources/js/swiper.js" }}
+        {{ stack:scripts }}
+
+        {{ if environment == 'staging' }}
+            {{ plugins:staging_scripts }}
+        {{ elseif environment == 'production' }}
+            {{ plugins:live_scripts }}
+        {{ endif }}
+    </body>
+</html>
