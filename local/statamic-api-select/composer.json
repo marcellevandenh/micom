@@ -1,0 +1,20 @@
+{
+    "name": "surge/statamic-api-select",
+    "type": "statamic-addon",
+    "autoload": {
+        "psr-4": {
+            "Surge\\ApiSelectFieldtype\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "API Select Fieldtype",
+            "description": "Utilise API endpoints for your Select Fieldtype options."
+        },
+        "laravel": {
+            "providers": [
+                "Surge\\ApiSelectFieldtype\\ServiceProvider"
+            ]
+        }
+    }
+}
