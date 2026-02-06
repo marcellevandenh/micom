@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Log;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Notifications\Notifiable;
+use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    use CrudTrait;
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
@@ -44,5 +47,15 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function getRedirectRoute()
+    {
+        Log::debug('User->getRedirectRoute: ' . (string)$this->user_type);
+        return match((string)$this->user_type) {
+            "ADMIN" => '/cp', //see php artisan route:list
+            // "ADMIN" => 'backpack.dashboard', //see php artisan route:list
+            "CUSTOMER" => 'dashboard', //must be named in the routes
+        };
     }
 }

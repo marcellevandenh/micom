@@ -1,0 +1,27 @@
+{
+    "name": "surge/email-cms",
+    "description": "Email CMS package for laravel backpack admin area",
+    "autoload": {
+        "psr-4": {
+            "Surge\\EmailCms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Surge Developers",
+            "email": "developers@surgems.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "backpack/crud": "^6.0",
+        "illuminate/support": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Surge\\EmailCms\\EmailCmsServiceProvider"
+            ]
+        }
+    }
+}

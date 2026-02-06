@@ -10,6 +10,10 @@ return [
     | Whether the Control Panel should be enabled, and through what route.
     |
     */
+    'auth' => [
+        'enabled' => false,
+        'redirect_to' => '/admin'
+    ],
 
     'enabled' => env('CP_ENABLED', true),
 

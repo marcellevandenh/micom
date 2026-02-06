@@ -12,6 +12,7 @@
     "require": {
         "php": "^8.2",
         "aryehraber/statamic-captcha": "^1.13",
+        "backpack/theme-tabler": "^1.2",
         "joetannenbaum/antlers-stack-tags": "^0.1.0",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
@@ -21,11 +22,22 @@
         "surgems/redirect-urls": "*"
     },
     "require-dev": {
+        "backpack/activity-log": "^2.0",
+        "backpack/crud": "^6.7",
+        "backpack/editable-columns": "^3.0",
+        "backpack/filemanager": "^3.0",
+        "backpack/generators": "^4.0",
+        "backpack/permissionmanager": "^7.2",
+        "backpack/pro": "^2.2",
+        "backpack/theme-surge": "*",
         "barryvdh/laravel-debugbar": "^3.8.1",
         "fakerphp/faker": "^1.23",
+        "guzzlehttp/guzzle": "^7.2",
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",
+        "laravel/sanctum": "^4.1",
+        "laravel/tinker": "^2.10.1",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^11.5.3",
@@ -87,12 +99,31 @@
             "pixelfear/composer-dist-plugin": true
         }
     },
-    "repositories": [
-        {
+    "repositories": {
+        "url":
+            {
+                "type": "path",
+                "url": "./local/redirect-urls/"
+            },
+        "backpack":
+            {
+                "type": "composer",
+                "url": "https://repo.backpackforlaravel.com"
+            },
+        "theme":
+            {
+                "type": "git",
+                "url": "https://github.com/Surge-Marketing-Solutions/theme-surge"
+            },
+        "local-api": {
             "type": "path",
-            "url": "./local/redirect-urls/"
+            "url": "./local/statamic-api-select/"
+        },
+        "local-email": {
+            "type": "path",
+            "url": "./local/email-cms/"
         }
-    ],
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

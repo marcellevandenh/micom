@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'repository' => 'file',
+    // 'repository' => 'file',
+    'repository' => 'eloquent',
 
     'repositories' => [
 
@@ -30,6 +31,7 @@ return [
 
         'eloquent' => [
             'driver' => 'eloquent',
+            'model' => App\Models\User::class,
         ],
 
     ],
@@ -106,7 +108,9 @@ return [
     'tables' => [
         'users' => 'users',
         'role_user' => 'role_user',
+        'roles' => false,
         'group_user' => 'group_user',
+        'group' => false
     ],
 
     /*
