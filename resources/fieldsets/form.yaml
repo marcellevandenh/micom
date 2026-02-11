@@ -1,0 +1,28 @@
+title: Form
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Subtitle
+  -
+    handle: form
+    field:
+      max_items: 1
+      type: form
+      display: Form
+      width: 50
+  -
+    handle: redirect_url
+    field:
+      type: link
+      display: 'Redirect URL'
+      instructions: 'If this is blank the form will automatically redirect to /thank-you.'
+      width: 50
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image

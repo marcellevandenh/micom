@@ -1,0 +1,56 @@
+{{ if form:handle }}
+    <section class="large-form">
+        <div class="wrapper"> 
+         
+            {{ form:create :in="form:handle" error="#form" redirect="{{ redirect_url ? redirect_url : '/thank-you' }}" }}
+                {{ sections }}
+                   <div class="inner"> {{# flex parent#}}
+
+                    <div class="form" id="form"> {{# flex element 1 #}}
+                            {{ if subtitle}}
+                            <div class="subtitle">
+                                <h4>{{ subtitle }}</h4>
+                            </div>
+                            {{endif}}
+
+                        <div class="fields">
+                           
+                            {{ fields }}
+                                <div class="field {{ type }} {{ width ? 'flex-{{width}}' : 'flex-100'}}">
+                                    <label for="{{ handle }}">{{ display }}{{ validate ? '<span>*</span>' : '' }} {{ prepend ? '<span>({ prepend })</span>' : '' }}</label>
+                                    {{ field }}
+                                    {{ instructions ? '<p class="instruction">{ instructions }</p>' : '' }}
+                                </div>
+                            {{ /fields }}
+                             <button type="submit" id="submit-btn" class="btn pill-btn">SEND MESSAGE</button>
+                        </div>
+                        
+
+                        <div class="form-footer">
+                            <div class="captcha">
+                                {{ nocache }}
+                                    {{ captcha }}
+                                    
+                                    {{ if error:captcha }}
+                                        <p class="error">{{ error:captcha }}</p>
+                                    {{ /if }}
+                                {{ /nocache }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image"> {{# flex element 2 #}}
+                        {{  if image }}
+                            <picture>
+                                <source media="(min-width: 576px)" srcset="{{ glide:image height='900' format='webp' quality='85' }}" type="image/webp">
+                                <source media="(max-width: 576px)" srcset="{{ glide:image height='531' format='webp' quality='85' }}" type="image/webp">
+                                <img loading="lazy" src="{{ image }}" width="{{ image:width }}" height="{{ image:height }}" alt="{{ image:alt }}">
+                            </picture>
+                        {{ endif }}
+                    </div><!--image-->
+                </div>
+                {{ /sections }}
+            {{ /form:create }}
+          
+        </div>
+    </section>
+{{ endif }}

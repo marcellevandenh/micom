@@ -1,0 +1,148 @@
+@import '../variables';
+
+section.values-grid {
+    padding: 0;
+
+
+    .wrapper {
+        background-color: #F2F2FE;
+        max-block-size: 80%;
+        max-width: 100%;
+        width: 100%;
+        padding: 5rem;
+        bottom: 0px;
+
+
+        >.content {
+            text-align: center;
+            margin-bottom: 80px;
+
+            .caption{
+                margin: 20px;
+            }
+
+            h5 {
+                font-weight: 700;
+            }
+
+        }
+
+        .subtitle {
+            @include secondary($fw: 700, $fs: 1rem);
+
+
+
+            &.purple   { color: $purple; }
+            &.pink   { color: $pink; }
+            &.yellow   { color: $yellow; }
+            &.orange   { color: $orange; }
+            &.green  { color: $green; }
+            &.teal  { color: $teal; }
+            &.blue { color: $blue; }
+            &.altOrange  { color: $altOrange; }
+            &.lilac { color: $purpleBrand; }
+            &.darkPurple   { color: $darkPurple; }
+            &.red { color: $red; }
+
+        }
+
+        .caption {
+                max-width: 100%;
+                margin: auto;
+                font-weight: 700;
+
+            }
+
+
+        .items {
+            @include flex(flex-start, center, row, wrap);
+            // margin-top: 60px;
+            gap: 30px;
+
+
+            .item {
+                @include flex(flex-start, flex-start, row);
+                gap: 30px;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 40px;
+
+
+                .icon {
+                    width: 48px;
+                    min-width: 48px;
+                    margin: 0;
+
+                    &.purple   { path {fill: $purple; }}
+                    &.pink   { path {fill: $pink; } }
+                    &.orange   { path {fill: $orange; } }
+                    &.green  { path {fill: $green; } }
+                    &.teal  { path {fill: $teal; } }
+                    &.blue { path {fill: $blue; } }
+                    &.altOrange  { path {fill: $altOrange; } }
+                    &.lilac { path {fill: $purpleBrand; }}
+                    &.darkPurple   { path {fill: $darkPurple; }}
+                    &.red { path {fill: $red; }}
+
+                    svg {
+                        display: block;
+                    }
+
+                }
+
+                .item-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+@media #{ $large } {
+    section.values-grid {
+
+        .wrapper {
+            max-width: 100%;
+            padding: 5rem;
+            position: relative;
+
+            .caption {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 380px;
+                text-align: center;
+            }
+
+            .items {
+                @include flex(flex-start, center, row, wrap);
+                gap: 50px;
+                margin: 0 80px;
+
+                .item {
+                    width: calc(50% - 120px);
+                    padding-right: 50px;
+                }
+            }
+        }
+
+        .wrapper::after {
+            content:'';
+            position: absolute;
+            bottom: -800px; /* how far you want it to extend */
+
+            max-width: 100%;
+            margin:0 auto;
+            // width: 100%;
+            left: 0;
+            right: 0;
+            height: 800px;
+            background-color: #F2F2FE;
+            z-index: -20;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+title: FAQ
+fields:
+  -
+    handle: faq
+    field:
+      type: replicator
+      display: FAQ
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: content
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content

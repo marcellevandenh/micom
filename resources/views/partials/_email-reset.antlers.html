@@ -1,0 +1,73 @@
+
+    <section class="login">
+        <div class="wrapper">
+     
+            <div class="inner">
+                <div class="content">
+                    {{# <h6>Login</h6> #}}
+                    <h4>{{ title }}</h4>
+
+                     
+
+                     {{ if session:status }}
+                        <div class="alert alert-success error">
+                            {{ session:status }}
+                        </div>
+                    {{ /if }}
+
+                    {{ session:status }}
+                        <div class="alert alert-success">
+                            Session Status 2: {{ session:status }} 
+                        </div>
+                    {{ /session:status }}
+
+                    {{ get_errors:email}}
+                        <div class="errors">
+                        <ul>
+                            {{ messages }}
+                            <li class="error">{{ message }}</li>
+                            {{ /messages }}
+                        </ul>
+                        </div>
+                    {{ /get_errors:email }}
+
+                   
+                                    
+
+                    <form action="members/password/email" method="POST" autocomplete="off">
+                        <input type="hidden" name="_token" value="{{ csrf_token }}" autocomplete="off">
+                
+                        <div class="fields">
+                            <div class="field">
+                                <label for="email">Email Address*</label>
+                                <input type="text" name="email" id="email" placeholder="johnsmith@hotmail.co.uk" />
+                                                    
+                            </div>
+
+                            <button class="btn pill-btn" type="submit">Send Password Reset Link</button>
+
+                        </div><!-- FIELDS -->
+                    </form><!-- FORM -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+<script>
+    var cover = document.querySelector('.hero'),
+        coverHeight = Math.round(cover.offsetHeight),
+        translate,
+        parallaxThreshold = 4;
+
+    function parallax() {
+        if (window.scrollY < coverHeight) {
+            translate = Math.round(window.scrollY / parallaxThreshold);
+            window.requestAnimationFrame(function () {
+                cover.style.transform = 'translateY(' + translate + 'px)';
+            });
+        }
+    }
+
+</script>

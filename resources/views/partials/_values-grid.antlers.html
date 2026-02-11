@@ -1,0 +1,42 @@
+<section class="values-grid">
+    <div class="wrapper">
+        <div class="content">
+            {{ if subtitle }}
+                <div class="subtitle {{ colour ? colour|slugify : '' }}">
+                    {{ subtitle }}
+                </div>
+            {{ endif }}
+            {{ if content }}
+                <div class="caption">
+                     {{ content ? content : '' }}
+                </div>
+            {{ endif}}
+        </div>
+        <div class="items">
+            {{ items }}
+                <div class="item">
+                    {{ if icon }}
+                        <div class="icon {{ colour ? colour|slugify : '' }}">
+                            {{ svg src="{{ icon }}" class="icon-svg" }}
+                        </div>
+                    {{ endif }}
+
+                    <div class="item-text">
+                        {{ if subtitle_item }}
+                            <div class="subtitle {{ colour ? colour|slugify : '' }}">
+                                {{ subtitle_item }}
+                            </div>
+                        {{ endif }}
+
+                        {{ if content }}
+                            <div class="content">
+                                {{ content }}
+                            </div>
+                        {{ endif }}
+                    </div>
+                </div>
+
+            {{ /items }}
+        </div>
+    </div>
+</section>

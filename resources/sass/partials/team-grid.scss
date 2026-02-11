@@ -1,0 +1,116 @@
+@import '../variables';
+
+section.team-grid {
+    width: 100%;
+   
+    .wrapper {
+
+        >.content {
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 75%;
+            margin: auto;
+
+            
+              
+            &.purple { p, h3 { color: $purple; } }
+            &.pink { h3 { color: $pink; }   }
+            &.yellow { h3 { color: $yellow; } }
+            &.orange { h3 { color: $orange; } }
+            &.green { h3 { color: $green; } }
+            &.teal { h3 { color: $teal; } }
+            &.blue { h3 { color: $blue; } }
+            &.altOrange { h3 { color: $altOrange; } } 
+            &.red { h3 { color: $red; }  }  
+            
+
+            h3 {
+               @include primary($fw: 700, $fs: 1.8rem, $c:$darkPurple);
+
+            }
+        }
+
+        .items {
+            @include flex(center, center, row, wrap);
+            gap: 48px;
+            margin-top: 50px;
+      
+
+            .item {
+                @include flex(center, center, column);
+                gap: 24px;
+                flex-basis: 40%;
+                width: 100%;
+                max-width: 400px;
+
+                    &.purple { p, h3 { color: $purple; } }
+                    &.pink { h3 { color: $pink; }   }
+                    &.yellow { h3 { color: $yellow; } }
+                    &.orange { h3 { color: $orange; } }
+                    &.green { h3 { color: $green; } }
+                    &.teal { h3 { color: $teal; } }
+                    &.blue { h3 { color: $blue; } }
+                    &.altOrange { h3 { color: $altOrange; } } 
+                    &.red { h3 { color: $red; }  }
+
+               .image {
+                   
+                    img {
+                        aspect-ratio: 1/1;
+                        width: 100%;
+                        max-height: 200px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                .content {
+                    text-align: center;
+
+                    &.purple { h3 { color: $purple; } }
+                    &.pink { h3 { color: $pink; }   }
+                    &.yellow { h3 { color: $yellow; } }
+                    &.orange { h3 { color: $orange; } }
+                    &.green { h3 { color: $green; } }
+                    &.teal { h3 { color: $teal; } }
+                    &.blue { h3 { color: $blue; } }
+                    &.altOrange { h3 { color: $altOrange; } }   
+                    &.red { h3 { color: $red; }  }                 
+
+                    h3 {
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        font-size: 1.15rem;
+                    }
+
+                    p {
+                        @include primary($fw: 400, $fs: 1rem, $c: $black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.team-grid {
+        .wrapper {
+
+            >.content {
+                  max-width: 60%;
+
+            }
+
+            .items {
+                // margin-top: 40px;
+                margin: 40px 0px;
+                gap: 15px; 
+
+                .item {
+                    flex-basis: calc(25% - 30px);
+                    
+                }
+            }
+        }
+    }
+}

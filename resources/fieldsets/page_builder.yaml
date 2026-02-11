@@ -3,33 +3,39 @@ fields:
   -
     handle: page_builder
     field:
-      collapse: false
-      previews: true
-      fullscreen: true
+      type: replicator
+      display: 'Page Builder'
       sets:
         new_set_group:
           display: 'New Set Group'
-          instructions: null
-          icon: null
           sets:
             hero:
               display: Hero
-              instructions: null
-              icon: null
               fields:
                 -
                   import: hero
-            thank_you_conversion_events:
-              display: 'Thank You Conversion Events'
-              instructions: null
-              icon: programming-script-code-brackets
+            hero_solid:
+              display: Hero_solid
               fields:
                 -
-                  import: ga_event
-      type: replicator
-      display: 'Page Builder'
-      icon: replicator
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      hide_display: false
+                  import: hero_solid
+            form:
+              display: Form
+              fields:
+                -
+                  import: form
+            team_grid:
+              display: 'Team Grid'
+              fields:
+                -
+                  import: team_grid
+            services_grid:
+              display: 'Services Grid'
+              fields:
+                -
+                  import: services_grid
+            services_card_grid:
+              display: 'Services Card Grid'
+              fields:
+                -
+                  import: services_card_grid

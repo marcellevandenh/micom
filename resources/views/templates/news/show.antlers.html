@@ -1,0 +1,162 @@
+<section class="news-article">
+    <div class="wrapper">
+        <div class="content">
+
+            <h2>{{ title }}</h2>
+            <p>{{ date format="M d, Y" }}</p>
+        </div>
+        <article>
+            {{ if featured_image }}
+                <div class="header-image">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="{{ glide:featured_image width='1300' }}" type="image/webp">
+                        <source media="(max-width: 1199px)" srcset="{{ glide:featured_image width='900' }}" type="image/webp">
+                        <img loading="lazy" src="{{ featured_image }}" width="100%" height="100%" alt="{{ featured_image:alt }}">
+                    </picture>
+                </div>
+            {{ endif }}
+
+            {{ article_builder }}
+                {{ push:styles once="true" }}
+                    {{ vite src="resources/sass/partials/{ type | slugify }.scss" }}
+                {{ /push:styles }}
+
+                {{ partial:partials/{ type|slugify } }}
+            {{ /article_builder }}
+
+          
+            </div>
+        </article>
+
+        {{ collection:news as="post" paginate="{ show_count }"  limit="3"}}
+        <section class="blog-index">
+            <div class="wrapper">
+                {{ if snippet}}
+                <div class="snippet">
+                    {{ snippet }}
+                </div>
+                {{ endif}}
+                <div class="content">
+                    {{ content }}
+                </div>
+
+                {{ if show_categories }}
+                    {{ taxonomy:news_categories as="cat" }}
+                        <div class="categories">
+                            <h4>Search by Category:</h4>
+                            <div class="filters">
+                                {{ cat }}
+                                    <a href="{{ page:url }}{{ url }}" class="filter">{{ title }}</a>
+                                {{ /cat }}
+                            </div>
+                        </div>
+                    {{ /taxonomy:news_categories }}
+                {{ endif }}
+
+                <div class="items">
+                    {{ post }}
+                        <a href="{{ url }}" class="item">
+                            <div class="image">
+                                {{ if featured_image }}
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="{{ glide:featured_image width='300' }}" type="image/webp">
+                                        <source media="(max-width: 1199px)" srcset="{{ glide:featured_image width='300' }}" type="image/webp">
+                                        <img loading="lazy" src="{{ featured_image }}" width="100%" height="100%" alt="{{ featured_image:alt }}">
+                                    </picture>
+                                {{ endif }}
+                            </div>
+                            <div class="content">
+                                <div class="btn date">
+                                    {{ date | format('M d, Y') }}
+                                </div>
+                                <h4>{{ title | safe_truncate(50, '...') }}</h4>
+                                {{ if snippet }}
+                                    {{ snippet | safe_truncate(120, '...') }}
+                                {{ endif }}
+                                {{ if content }}
+                                    {{content}}
+                                {{ endif}}
+
+                            </div>
+                        </a>
+                    {{ /post }}
+                </div>
+
+                {{ paginate }}
+                    {{ if next_page or prev_page }}
+                        <ul class="pagination">
+                            {{ if prev_page }}
+                                <li class="previous"><a href="{{ prev_page }}#products">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M15.5 15.8751L11.62 11.9951L15.5 8.11508C15.89 7.72508 15.89 7.09508 15.5 6.70508C15.3132 6.51783 15.0595 6.4126 14.795 6.4126C14.5305 6.4126 14.2769 6.51783 14.09 6.70508L9.50002 11.2951C9.11002 11.6851 9.11002 12.3151 9.50002 12.7051L14.09 17.2951C14.48 17.6851 15.11 17.6851 15.5 17.2951C15.88 16.9051 15.89 16.2651 15.5 15.8751Z" fill="#060813"/>
+                                    </svg>
+                                </a></li>
+                            {{ else }}
+                                <li class="previous disabled"><span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                        <path d="M15.5 15.8751L11.62 11.9951L15.5 8.11508C15.89 7.72508 15.89 7.09508 15.5 6.70508C15.3132 6.51783 15.0595 6.4126 14.795 6.4126C14.5305 6.4126 14.2769 6.51783 14.09 6.70508L9.50002 11.2951C9.11002 11.6851 9.11002 12.3151 9.50002 12.7051L14.09 17.2951C14.48 17.6851 15.11 17.6851 15.5 17.2951C15.88 16.9051 15.89 16.2651 15.5 15.8751Z" fill="#060813"/>
+                                    </svg>
+                                </span></li>
+                            {{ /if }}
+                    
+                            {{ links:segments }}
+                                <div class="pages">
+                                    {{ first }}
+                                        {{ if page == current_page }}
+                                            <li class="active"><span>{{ page < 10 ? '0{page}' : page }}</span></li>
+                                        {{ else }}
+                                            <li><a href="{{ url }}">{{ page < 10 ? '0{page}' : page }}</a></li>
+                                        {{ /if }}
+                                    {{ /first }}
+                        
+                                    {{ if slider }}
+                                        <li class="disabled"><span>...</span></li>
+                                    {{ /if }}
+                        
+                                    {{ slider }}
+                                        {{ if page == current_page }}
+                                            <li class="active"><span>{{ page < 10 ? '0{page}' : page }}</span></li>
+                                        {{ else }}
+                                            <li><a href="{{ url }}">{{ page < 10 ? '0{page}' : page }}</a></li>
+                                        {{ /if }}
+                                    {{ /slider }}
+                        
+                                    {{ if slider || (!slider && last) }}
+                                        <li class="disabled"><span>...</span></li>
+                                    {{ /if }}
+                        
+                                    {{ last }}
+                                        {{ if page == current_page }}
+                                            <li class="active"><span>{{ page < 10 ? '0{page}' : page }}</span></li>
+                                        {{ else }}
+                                            <li><a href="{{ url }}">{{ page < 10 ? '0{page}' : page }}</a></li>
+                                        {{ /if }}
+                                    {{ /last }}
+                                </div>
+                            {{ /links:segments }}
+                    
+                            {{ if next_page }}
+                                <li class="next">
+                                    <a href="{{ next_page }}#products">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M9.50001 15.8751L13.38 11.9951L9.50001 8.1151C9.31275 7.92827 9.20752 7.67462 9.20752 7.4101C9.20752 7.14558 9.31275 6.89193 9.50001 6.7051C9.89001 6.3151 10.52 6.3151 10.91 6.7051L15.5 11.2951C15.89 11.6851 15.89 12.3151 15.5 12.7051L10.91 17.2951C10.52 17.6851 9.89001 17.6851 9.50001 17.2951C9.12001 16.9051 9.11001 16.2651 9.50001 15.8751Z" fill="#060813"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            {{ else }}
+                                <li class="next disabled">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <path d="M9.50001 15.8751L13.38 11.9951L9.50001 8.1151C9.31275 7.92827 9.20752 7.67462 9.20752 7.4101C9.20752 7.14558 9.31275 6.89193 9.50001 6.7051C9.89001 6.3151 10.52 6.3151 10.91 6.7051L15.5 11.2951C15.89 11.6851 15.89 12.3151 15.5 12.7051L10.91 17.2951C10.52 17.6851 9.89001 17.6851 9.50001 17.2951C9.12001 16.9051 9.11001 16.2651 9.50001 15.8751Z" fill="#060813"/>
+                                        </svg>
+                                    </span>
+                                </li>
+                            {{ /if }}
+                        </ul>
+                    {{ endif }}
+                {{ /paginate }}
+            </div>
+        </section>
+        {{ /collection:news }}
+    </div>
+</section>

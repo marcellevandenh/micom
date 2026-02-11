@@ -1,0 +1,139 @@
+@import '../variables';
+
+section.faq-list {
+  
+    padding: 40px 40px;
+    margin-bottom: 80px;
+
+    .wrapper {
+        .accordion-container {
+            overflow: hidden;
+
+            .accordion-wrapper {
+                border-color: $white;
+                
+                padding: 20px 0;
+
+                &.open {
+                    .accordion {
+                        background: $lightLilac;
+                        color: $purpleBrand;
+                        border-radius: 5px 0 0 0 ;
+                        border-left: 6px solid $lilac; /* darker purple */
+                        h4 {
+                           color: $purpleBrand; 
+                        }
+                        
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .accordion {
+                    background: $lightLilac;
+                    border-radius: 5px 0 0 5px;
+                    border-left: 6px solid $lilac; /* darker purple */
+                    padding: 1rem;
+                    align-items: center;
+                    transition: background .3s ease;
+                    justify-content: left;
+
+                    h4 {
+                        color: $darkPurple;
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        margin-bottom: 0;
+                        transition: all .3s ease;
+                    }
+
+                    svg {
+                        max-width: 24px;
+                        transform: rotate(0deg);
+                        transition: all .3s ease;
+
+                        path {
+                            fill: $darkPurple;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+                .panel {
+                    background: $lightLilac;
+                    border-radius: 0 0 0 5px;
+                    border-left: 6px solid $lilac; /* darker purple */
+                    .content {
+                        padding: 1rem;
+                        
+                        p {
+                            font-size: 1.125rem;
+                            margin-bottom: 16px;
+
+                            a, strong {
+                                font-size: 1.125rem;
+                            }
+                        }
+
+                        ul {
+                            margin-bottom: 16px;
+                            li {
+                                p {
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $medium } {
+    section.faq-list {
+        .wrapper {
+            .accordion-container {    
+                .accordion-wrapper {
+                    .accordion {
+                        padding: 1rem 1rem 1rem;
+
+                        h3 {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .panel {
+                        .content {
+                            padding: 1.5rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.faq-list {
+        padding: 20px 16px;
+
+        .wrapper {
+            .accordion-container {  
+                border-radius: 20px;
+
+                .accordion-wrapper {
+                       
+                    .accordion {
+                        padding: 2rem 2rem 2rem;
+                  
+                    }
+                    .panel {
+                        .content {
+                            padding: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

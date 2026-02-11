@@ -1,0 +1,100 @@
+@import '../variables';
+
+section.sub-heading {
+     padding-bottom: 0;
+
+    .wrapper {
+
+        .subtitle {
+            padding:0;
+
+                &.purple { color: $purple; } 
+                &.pink  { color: $pink; }   
+                &.yellow { color: $yellow; } 
+                &.orange  { color: $orange; } 
+                &.green { color: $green; } 
+                &.teal { color: $teal; } 
+                &.blue { color: $blue; } 
+                &.altOrange  { color: $altOrange; }    
+                &.lilac { color: $lilac; } 
+                &.darkPurple  { color: $darkPurple; } 
+                &.red  { color: $red; }
+    }
+        >.content {
+            text-align: center;
+            max-width: 75%;
+            margin: 0 auto;
+           
+
+            h3 {
+               @include primary($fw: 700, $fs: 1.8rem, $c:$darkPurple);
+
+            }
+        }
+
+        .items {
+            @include flex(flex-start, center, row, wrap);
+            gap: 48px;
+
+            .item {
+                @include flex(center, center, column);
+                gap: 24px;
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 400px;
+
+                .icon {
+                    width: 100px;
+                    border-radius: 32px;
+                    overflow: hidden;
+                    box-shadow: 10px 10px 15px rgba($black, .15);
+                }
+
+                .content {
+                    text-align: center;
+
+
+                    &.purple { h3 { color: $purple; } }
+                    &.pink { h3 { color: $pink; }   }
+                    &.yellow { h3 { color: $yellow; } }
+                    &.orange { h3 { color: $orange; } }
+                    &.green { h3 { color: $green; } }
+                    &.teal { h3 { color: $teal; } }
+                    &.blue { h3 { color: $blue; } }
+                    &.altOrange { h3 { color: $altOrange; } }                    
+
+                    h3 {
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        font-size: 1.15rem;
+                    }
+
+                    p {
+                        @include primary($fw: 400, $fs: 1rem, $c: $black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.services-grid {
+        .wrapper {
+
+            >.content {
+                  max-width: 60%;
+
+            }
+
+            .items {
+                margin-top: 40px;;
+                gap: 90px;
+
+                .item {
+                    flex-basis: calc(30% - 45px);
+                }
+            }
+        }
+    }
+}

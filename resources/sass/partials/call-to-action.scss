@@ -1,0 +1,112 @@
+@import '../variables';
+
+section.call-to-action {
+  
+    .wrapper {
+        @include flex(center, space-between, column, wrap);
+        position: relative;
+
+        .content {
+
+            background: linear-gradient(-90deg, $purpleBrand, $darkPurple);
+            &.apply-page-colour {
+                .btn {
+                    background: none;
+                    border: none;
+                    &.pill-btn {
+                        border: solid 2px white;
+                    }
+                }
+                &.purple {background: $purple; } 
+                &.pink  { background: $pink; }   
+                &.yellow { background: $yellow; } 
+                &.orange { background: $orange; } 
+                &.green  { background:$green; } 
+                &.blue { background: $blue; } 
+                &.teal  { background: $teal; } 
+                &.altOrange { background: $altOrange; } 
+                &.lilac{ background: $lilac; } 
+                &.darkPurple{ background: $darkPurple; } 
+                &.purpleAlt { background: $purpleAlt; } 
+                &red { background: $red;} 
+            }
+  
+
+            border-radius: 20px;
+            padding: 30px 20px;
+            
+            h3 {
+                color: $white;
+            }
+
+            h4 {
+                color: $white;
+                font-weight: 700; 
+                line-height: 150%;
+                // font-size: 30px;
+                font-size: 1.9rem;
+            }
+
+            .btn {
+                margin: 0 auto;
+            }
+
+            .action {
+                background: none;
+                text-decoration: none;
+                color: white;
+                font-weight: 800;
+                letter-spacing: 2px;;
+            }
+
+            a {
+                padding:5px;
+                @include secondary(800, 1rem, $white);
+            }
+
+        }
+
+    }
+}
+
+@media #{ $large } {
+    section.call-to-action {
+        .wrapper {
+           
+            .content {
+
+                // padding: 48px 100px 48px 48px;
+                 @include flex(center, center, row);
+                &.no-image {
+                    padding: 48px;
+                    margin: auto;
+                    width: 100%;
+                }
+
+                h3 {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 3rem;
+                }
+
+                h4 {
+                    color: $white;
+                    font-weight: 700; 
+                }
+
+                .btn { // target your button
+                    margin-right: 0; // pushes it to the far right
+                }
+            }
+            
+            .image {
+                display: block;
+                width: 100%;
+                max-width: 400px;
+                position: absolute;
+                right: 0;
+                bottom: -80px;
+            }
+        }
+    }
+}

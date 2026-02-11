@@ -1,0 +1,37 @@
+title: 'Hero Solid'
+fields:
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: Image
+      width: 50
+      max_files: 1
+  -
+    import: color
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Subtitle
+      width: 50
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      buttons:
+        - h1
+        - h2
+        - h3
+        - bold
+        - italic
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - unorderedlist
+        - table

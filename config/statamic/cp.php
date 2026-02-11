@@ -15,9 +15,9 @@ return [
         'redirect_to' => '/admin'
     ],
 
-    'enabled' => env('CP_ENABLED', true),
+    'enabled' => true,
 
-    'route' => env('CP_ROUTE', 'cp'),
+    'route' => 'cp',
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +97,7 @@ return [
     |
     */
 
-    'support_url' => env('STATAMIC_SUPPORT_URL', 'mailto:help@surgems.co.uk'),
+    'support_url' => env('STATAMIC_SUPPORT_URL', 'mailto:micomproperty@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------

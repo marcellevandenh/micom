@@ -2,42 +2,30 @@ title: 'LLMS Text'
 data:
   llms_content: |-
     # llms.txt – Guidance for Large Language Models
-    # Website: https://surge-online.co.uk/
+
     # This file provides directives for AI bots and LLMs regarding content access and usage.
 
     User-agent: GPTBot
     Disallow: /cp
     Allow: /blog/
-    Allow: /creative/
-    Allow: /marketing/
-    Allow: /development/
     Allow: /about-us/
     Allow: /contact/
 
     User-agent: ClaudeBot
     Disallow: /cp
     Allow: /blog/
-    Allow: /creative/
-    Allow: /marketing/
-    Allow: /development/
     Allow: /about-us/
     Allow: /contact/
 
     User-agent: Gemini
     Disallow: /cp
     Allow: /blog/
-    Allow: /creative/
-    Allow: /marketing/
-    Allow: /development/
     Allow: /about-us/
     Allow: /contact/
 
     User-agent: *
     Disallow: /cp
     Allow: /blog/
-    Allow: /creative/
-    Allow: /marketing/
-    Allow: /development/
     Allow: /about-us/
     Allow: /contact/
 
@@ -53,4 +41,4 @@ data:
     # We request that AI providers respect these policies and do not store or use our content for model training.
 
     # For permissions, clarifications or formal data requests, please contact:
-    Contact: hello@surge-online.co.uk
+    Contact: micomproperty@gmail.com

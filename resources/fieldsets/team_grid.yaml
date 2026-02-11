@@ -1,0 +1,43 @@
+title: 'Team Grid'
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Subtitle
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Items
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    type: assets
+                    display: Image
+                    max_files: 1
+                -
+                  handle: subtitle
+                  field:
+                    type: text
+                    display: Subtitle
+                -
+                  handle: content
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content

@@ -1,0 +1,159 @@
+@import '../variables';
+
+section.hero-solid {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 100px 0;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        &.purple {
+        background: linear-gradient(90deg, $purple, rgba($purple, .6));
+        }
+
+        &.pink {
+        background: linear-gradient(90deg, $pink, rgba($pink, .6));
+        }
+
+        &.yellow {
+        background: linear-gradient(90deg, $yellow, rgba($yellow, .6));
+        }
+
+        &.orange {
+        background: linear-gradient(90deg, $orange, rgba($orange, .6));
+        }
+
+        &.green {
+        background: linear-gradient(90deg, $green, rgba($green, .6));
+        }
+
+        &.teal {
+        background: linear-gradient(90deg, $teal, rgba($teal, .6));
+        }
+
+        &.blue {
+        background: linear-gradient(90deg, $blue, rgba($blue, .6));
+        }
+
+        &.altOrange {
+        background: linear-gradient(90deg, $altOrange, rgba($altOrange, .6));
+        }
+
+        &.lilac {
+        background: linear-gradient(90deg, $lilac, rgba($lilac, .6));
+        }
+
+        &.darkpurple {
+        background: linear-gradient(90deg, $darkPurple, rgba($darkPurple, .6));
+        }
+
+        &.altpurple {
+        background: linear-gradient(90deg, $purpleAlt, rgba($purpleAlt, .6));
+        }
+
+        &.red {
+        background: linear-gradient(90deg, $red, rgba($red, .6));
+        }
+
+
+        // &.purple {  background: $purple; &.no-image{ background: linear-gradient(90deg, $purple, rgba($purple, .6)); } }
+        // &.pink {background: $pink; &.no-image{ background: linear-gradient(90deg, $pink, rgba($pink, .6)); }}
+        // &.yellow {  background: $yellow; &.no-image{ background: linear-gradient(90deg, $yellow, rgba($yellow, .6)); }}
+        // &.orange {  background: $orange; &.no-image{ background: linear-gradient(90deg, $orange, rgba($orange, .6)); }}
+        // &.green {  background: $green; &.no-image{ background: linear-gradient(90deg, $green, rgba($green, .6)); }}
+        // &.teal {  background: $teal; &.no-image{ background: linear-gradient(90deg, $teal, rgba($teal, .6)); }}
+        // &.blue { background: $blue; &.no-image{ background: linear-gradient(90deg, $blue, rgba($blue, .6)); }}
+        // &.altOrange {  background: $altOrange; &.no-image{ background: linear-gradient(90deg, $altOrange, rgba($altOrange, .6)); }}
+        // &.lilac{ background: $lilac; &.no-image{ background: linear-gradient(90deg, $lilac, rgba($lilac, .6)); }}
+        // &.darkpurple{ background: $darkPurple; &.no-image{ background: linear-gradient(90deg, $darkPurple, rgba($darkPurple, .6)); }}
+        // &.altpurple { background: $purpleAlt;&.no-image{ background: linear-gradient(90deg, $purpleAlt, rgba($purpleAlt, .6)); }}
+        // &.red { background: $red; &.no-image{ background: linear-gradient(90deg, $red, rgba($red, .6)); }}
+
+        &.no-image{
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .image {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+    }
+
+    .wrapper {
+        .content {
+            width: 100%;
+            max-width: 688px;
+
+            h1 {
+                font-weight: 700;
+            }
+
+            h1, h2, h3, p, a, strong, b, i, em {
+                color: white;
+            }
+
+            p.subtitle {
+
+                color: $lilac;
+                letter-spacing: 2px;
+
+                &.purple
+                { color: $white;  }
+
+            }
+        }
+
+        .image {
+            display: none;
+        }
+
+    }
+}
+
+@media #{ $large } {
+    section.hero-solid {
+        border-radius: 0 0 300px 0;
+        position: relative;
+
+            .background {
+                overflow: visible;
+                z-index: -1;
+
+            .image {
+
+                display: block;
+                width: 100%;
+                max-width: 400px;
+                position: absolute;
+                left: 75%;
+
+                bottom: -350px;
+                img {
+                    height: auto;
+                    display: block;
+                    overflow: visible;
+                    z-index: 1;
+                 }
+            }
+        }
+    }
+}

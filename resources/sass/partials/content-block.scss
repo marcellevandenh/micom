@@ -1,0 +1,52 @@
+@import '../variables';
+
+section.content-block {
+    background: $purpleAlt;
+    overflow: hidden;
+    border-radius: 0 0 100px 0;
+   
+
+    &.add-padding {
+        .wrapper {
+            .content {
+                max-width: 700px;
+                width: 95%;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .wrapper {
+        .content {
+            
+            h3 {
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            
+            h2, h3, p, strong, b, em, i {
+                color: $white;
+            }
+
+            p {
+                a, &.subtitle {
+                    color: $lilac;
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.content-block {
+        border-radius: 0 0 300px 0;
+        .wrapper {
+            >.content {
+                h2 {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+    }
+}

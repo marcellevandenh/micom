@@ -1,0 +1,132 @@
+
+    <section class="login">
+        <div class="wrapper">
+{{#            
+        {{ if page and url !== '/' }}
+            <ul class="breadcrumbs">
+                {{ nav:breadcrumbs }}
+                    <li >
+                        {{ if is_current or not published }}
+                            <p>{{ title }}{{ if not is_current }}/{{ endif }}</p>
+                        {{ else }}
+                            <a href="{{ url }}">{{ title }}</a>
+               
+                        {{ endif }}
+                    </li>
+                {{ /nav:breadcrumbs }}
+            </ul>
+
+     
+
+        {{ endif }} #}}
+ 
+
+        <div class="inner">
+            <div class="content">
+                <h6>Login</h6>
+                <h1>{{ title }}</h1>
+
+               
+                <form action="members/login" method="POST" autocomplete="off">
+                    <input type="hidden" name="_token" value="{{ csrf_token }}" autocomplete="off">
+                      {{ get_errors:email}}
+                        <div class="errors">
+                        <ul>
+                            {{ messages }}
+                            <li class="error">{{ message }}</li>
+                            {{ /messages }}
+                        </ul>
+                        </div>
+                    {{ /get_errors:email }}
+
+                    <div class="fields">
+                        <div class="field">
+                            <label for="email">Email Address*</label>
+                            <input type="text" name="email" id="email" placeholder="johnsmith@hotmail.co.uk" />
+                           
+                        
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Password*</label>
+                            <input type="password" name="password" id="password" placeholder="Password" />
+                        </div>
+
+                        <button class="btn pill-btn" type="submit">Login</button><a class="forgot" href="/reset">Forgot your Password?</a>
+
+                        {{# <input type="text" class="invisible" name="{{ honeypot ?? 'honeypot' }}"> #}}
+                    </div><!-- FIELDS -->
+                </form><!-- FORM -->
+            </div>
+        </div>
+
+    </section>
+
+
+{{# {{ if hero }}
+    {{ hero }}
+    <section class="hero">
+
+        {{ if page and url !== '/' }}
+            <ul class="breadcrumbs">
+                {{ nav:breadcrumbs }}
+                    <li >
+                        {{ if is_current or not published }}
+                            <p>{{ title }}{{ if not is_current }}/{{ endif }}</p>
+                        {{ else }}
+                            <a href="{{ url }}">{{ title }}</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+                                <g id="Group_7851" data-name="Group 7851" transform="translate(-114 -95)">
+                                    <circle id="Ellipse_15" data-name="Ellipse 15" cx="4.5" cy="4.5" r="4.5" transform="translate(114 95)" fill="#fff"/>
+                                    <path id="Polygon_19" data-name="Polygon 19" d="M2.5,0,5,4H0Z" transform="translate(121 97) rotate(90)" fill="#e61434"/>
+                                </g>
+                            </svg>
+                        {{ endif }}
+                    </li>
+                {{ /nav:breadcrumbs }}
+            </ul>
+        {{ endif }}
+
+        <div class="inner">
+            {{ if content }}
+                <div class="content">
+                    {{ content }}
+
+                    {{ if button_link }}
+                        <a href="{{ button_link }}" class="btn">{{ button_text }}</a>
+                    {{ endif }}
+                </div><!--content-->
+            {{ endif }}
+            {{ if image }}
+                <div class="image">
+                    <picture>
+                        <source media="(min-width: 576px) and (max-width: 768px)" srcset="{{ glide:image height='649' format='webp' quality='85' }}" type="image/webp">
+                        <source media="(max-width: 576px)" srcset="{{ glide:image height='531' format='webp' quality='85' }}" type="image/webp">
+                        <img loading="lazy" src="{{ image }}" width="{{ image:width }}" height="{{ image:height }}" alt="{{ image:alt }}">
+                    </picture>
+                </div>
+            {{ endif }}
+        </div><!--inner-->
+        <div class="bottom-bg">
+
+        </div>
+    </section>
+    {{ /hero }}
+{{ endif }} #}}
+
+<script>
+    var cover = document.querySelector('.hero'),
+        coverHeight = Math.round(cover.offsetHeight),
+        translate,
+        parallaxThreshold = 4;
+
+    function parallax() {
+        if (window.scrollY < coverHeight) {
+            translate = Math.round(window.scrollY / parallaxThreshold);
+            window.requestAnimationFrame(function () {
+                cover.style.transform = 'translateY(' + translate + 'px)';
+            });
+        }
+    }
+
+</script>

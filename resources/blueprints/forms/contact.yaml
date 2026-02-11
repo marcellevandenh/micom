@@ -1,0 +1,35 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: first_name
+            field:
+              type: text
+              display: 'First name'
+              width: 50
+          -
+            handle: last_name
+            field:
+              type: text
+              display: 'Last name'
+              width: 50
+          -
+            handle: email_address
+            field:
+              type: text
+              display: 'Email address'
+              width: 50
+          -
+            handle: phone_number
+            field:
+              type: text
+              display: 'Phone number'
+              width: 50
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Message

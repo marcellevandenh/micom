@@ -1,7 +1,7 @@
 ---
-id: 8b0e75f0-99c6-4a0f-9128-feb1de5ec6c7
+id: c5502f0f-fcf3-4332-9d27-99b93135f91c
 blueprint: page
-title: Blog
+title: Login
 schema:
   code: null
   mode: htmlmixed
@@ -12,6 +12,11 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 5eb44808-b069-4ab8-89ac-00ec242f7025
-updated_at: 1685526927
+updated_by: 4
+updated_at: 1756736950
+page_builder:
+  -
+    id: mdiuemwu
+    type: login
+    enabled: true
 ---

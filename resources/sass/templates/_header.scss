@@ -42,7 +42,7 @@ header {
                     $height: 28px;
                     $spanHeight: 5px;
                     $midSpanTop: math.div($height - $spanHeight, 2);
-                    $color: $black;
+                    $color: $purpleBrand;
 
                     .burger-icon {
                         width: $width;
@@ -104,7 +104,7 @@ header {
                 @include pos-fix(calc((-100vh + $nav-height-sm*2)));
                 width: 100%;
                 height: calc(100vh - $nav-height-sm);
-                background: $black;
+                background: $lightLilac;
                 z-index: -1;
                 transition: top .5s ease-out, left .5s ease-out;
                 padding: 50px 52px 91px;
@@ -118,7 +118,10 @@ header {
                     border: none;
 
                     * {
-                        @include primary(600, 1.25rem, $white);
+                        @include primary(600, 1.25rem, $darkPurple);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
                     }
 
                     .accordion {
@@ -141,9 +144,8 @@ header {
                     }
                 }
 
-                .copyright {
-                    @include primary($c: $white);
-                    margin-top: 103px;
+                .btn {
+                    margin-top: 24px;
                 }
             }
         }
@@ -185,7 +187,7 @@ header {
                 }
     
                 .menu {
-                    @include flex();
+                    @include flex($ai: center);
                     gap: 10px;
                     position: static;
                     max-width: none;
@@ -195,6 +197,10 @@ header {
                     padding: 0;
                     overflow: visible;
                     background: unset;
+
+                    .btn {
+                        margin-top: 0;
+                    }
     
                     .accordion-wrapper {
                         &.open {
@@ -208,7 +214,7 @@ header {
                             padding: 5px 1.35vw;
 
                             * {
-                                @include primary(600, 1rem !important, $black);
+                                @include primary(600, 1rem !important, $darkPurple);
                             }
                         }
     
@@ -237,10 +243,6 @@ header {
                                 }
                             }
                         }
-                    }
-    
-                    .copyright {
-                        display: none;
                     }
                 }
             }

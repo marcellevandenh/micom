@@ -1,0 +1,28 @@
+<section class="hero-solid">
+
+    <div class="background {{ page_colour ?= page_colour|slugify }} {{ colour ?= colour|slugify }} {{ if image }} {{else}} no-image{{endif}} ">
+        {{ if image }}
+        <div class="image">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="{{ glide:image width='1920' }}" type="image/webp">
+                <source media="(max-width: 1199px)" srcset="{{ glide:image width='1600' }}" type="image/webp">
+                <img loading="lazy" src="{{ image }}" width="100%" height="100%" alt="{{ image:alt }}">
+            </picture>
+        </div>
+        {{endif}}
+
+    </div>
+
+    <div class="wrapper">
+        <div class="content {{ subtitle_colour ? subtitle_colour|slugify : '' }}">
+            {{ if subtitle }}
+                <p class="subtitle {{ page_colour ?= page_colour|slugify }}">
+                    {{ subtitle }}
+                </p>
+            {{ endif}}
+            {{ if content }}
+                {{ content }}
+            {{ endif }}
+        </div>
+    </div>
+</section>

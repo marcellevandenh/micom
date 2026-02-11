@@ -1,0 +1,21 @@
+title: 'Content Block'
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Subtitle
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+  -
+    import: buttons
+  -
+    handle: add_padding
+    field:
+      type: toggle
+      display: 'Add Padding'
+      instructions: 'Enable this if the below section has an overlapping image.'
