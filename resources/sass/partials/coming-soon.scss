@@ -2,8 +2,18 @@
 
 section.coming-soon {
     .wrapper {
-        @include flex(center, center, row);
+        @include flex(center, center, column);
         height: 300px;
+
+
+            text-align: center;
+            padding: 100px 20px;
+
+
+         img {
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
 
         .content {
             h1 {

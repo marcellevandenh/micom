@@ -2,9 +2,9 @@
 
 footer {
     padding: 32px 16px;
-    background: $lightLilac;
-   
-    
+    background: $black;
+
+
     @include flex(center, center, column);
     gap: 32px;
 
@@ -20,8 +20,8 @@ footer {
             }
 
             a, p {
-                @include primary(400, 1rem, $black);
-             
+                @include primary(400, 1rem, $white);
+
             }
 
             .address {
@@ -80,21 +80,21 @@ footer {
         .wrapper {
             @include flex(center, space-between, $fd: column);
             gap: 15px;
-            
+
             .copyright {
-                @include primary(500, 1rem, $darkPurple);
+                @include primary(500, 1rem, $white);
                 margin-bottom: 0;
             }
-    
+
             .surge {
                 @include flex(center, $fd: column);
                 gap: 6px;
-    
+
                 * {
-                    @include primary(500, 1rem, $darkPurple);
+                    @include primary(500, 1rem, $white);
                     margin-bottom: 0;
                 }
-    
+
                 > a, svg {
                     @include svg-size(110px, 28px);
 
@@ -102,10 +102,10 @@ footer {
                         fill: $brandLight;
                         transition: all .3s ease;
                     }
-    
+
                     &:hover {
                         path {
-                            fill: $purpleBrand;
+                            fill: $orange;
                         }
                     }
                 }
@@ -129,7 +129,7 @@ footer {
 
 @media #{ $large } {
     footer {
-        border-top: 5px solid $darkPurple;
+        border-top: 5px solid $grey;
         padding: 64px 16px 32px;
         gap: 64px;
 
