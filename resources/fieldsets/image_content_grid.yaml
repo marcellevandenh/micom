@@ -1,0 +1,38 @@
+title: 'Image Content Grid'
+fields:
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Items
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            items:
+              display: Items
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: content
+                  field:
+                    buttons:
+                      - h4
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content

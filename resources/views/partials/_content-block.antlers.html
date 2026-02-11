@@ -1,0 +1,13 @@
+<section class="content-block {{ add_padding ? 'add-padding' : '' }}">
+    <div class="wrapper">
+        <div class="content">
+            {{ if subtitle }}
+                <p class="subtitle">
+                    {{ subtitle }}
+                </p>
+            {{ endif }}
+            {{ content ? content : '' }}
+            {{ partial:buttons }}
+        </div>
+    </div>
+</section>

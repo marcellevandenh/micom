@@ -1,0 +1,76 @@
+@import '../variables';
+
+section.image-content-grid {
+    .wrapper {
+        .boxes {
+            @include flex(center, center, row, wrap);
+            gap: 24px;
+
+            .box {
+                @include flex(flex-start, flex-start, column);
+                flex-basis: 100%;
+                align-self: stretch;
+                border-radius: 100px 0 0 0;
+                overflow: hidden;
+                box-shadow: 8px 8px 10px 0px rgba(21, 8, 71, 0.20);
+
+                .image {
+                    aspect-ratio: 1.37/1;
+                    width: 100%;
+                    background: $purpleBrand;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .content {
+                    padding: 24px 16px;
+
+                    * {
+                        color: $darkPurple;
+                    }
+
+                    h4 {
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $medium } {
+    section.image-content-grid {
+        .wrapper {
+            .boxes {
+                .box {
+                    flex-basis: calc(50% - 12px);
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.image-content-grid {
+        .wrapper {
+            .boxes {
+                gap: 32px;
+
+                .box {
+                    flex-basis: calc(33% - 20px);
+
+                    .content {
+                        h4 {
+                            font-size: 1.375rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

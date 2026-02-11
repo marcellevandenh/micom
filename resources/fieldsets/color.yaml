@@ -1,0 +1,45 @@
+title: Color
+fields:
+  -
+    handle: colour
+    field:
+      options:
+        -
+          key: purple
+          value: Purple
+        -
+          key: pink
+          value: Pink
+        -
+          key: yellow
+          value: Yellow
+        -
+          key: orange
+          value: Orange
+        -
+          key: green
+          value: Green
+        -
+          key: blue
+          value: Blue
+        -
+          key: teal
+          value: Teal
+        -
+          key: altorange
+          value: OrangeAlt
+        -
+          key: lilac
+          value: Lilac
+        -
+          key: darkpurple
+          value: 'Dark Purple'
+        -
+          key: altpurple
+          value: PurpleAlt
+        -
+          key: red
+          value: Red
+      type: select
+      display: Colour
+      width: 50

@@ -1,0 +1,49 @@
+<section class="services-card-grid">
+    <div class="wrapper">
+        <div class="content">
+            {{ if subtitle }}
+                <p class="subtitle">
+                    {{ subtitle }}
+                </p>
+            {{ endif }}
+            {{ content ? content : '' }}
+        </div>
+
+        <div class="items ">
+            {{ items }}
+                <div class="item">
+                    <div class="item-header">
+                        <div class="image {{ colour ? colour|slugify : '' }}">
+                               {{ if image }}
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="{{ glide:image width='1300' }}" type="image/webp">
+                                        <source media="(max-width: 1199px)" srcset="{{ glide:image width='900' }}" type="image/webp">
+                                        <img loading="lazy" src="{{ image }}" width="100%" height="100%" alt="{{ image:alt }}">
+                                    </picture>
+                              {{ endif }}
+                        </div>
+                    </div>
+                    <div class="item-body">
+                        {{ if subtitle }} 
+                            <div class="subtitle  {{ colour ? colour|slugify : '' }}">
+                                    <h4>{{ subtitle }}</h4>
+                            </div>
+                        {{ endif }}
+                        {{ if content }}
+                            <div class="content">
+                                {{ content }}
+                            </div>
+                        {{ endif }}
+
+                        {{ if buttons }}
+                        {{ buttons }}
+                            <a href="{{ link }}" class="btn pill-btn {{ colour ? colour|slugify : '' }}">{{ text }}</a>
+                        {{ /buttons }}
+                    {{ endif }}
+                    </div>
+
+                </div>
+            {{ /items }}
+        </div>
+    </div>
+</section>

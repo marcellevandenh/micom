@@ -1,0 +1,148 @@
+@import '../variables';
+
+section.large-form {
+    padding-top: 0;
+    padding: 0;
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px;
+        background: $purpleAlt;
+        .inner {
+
+            .form {
+
+
+                .subtitle {
+                    h4 {
+                        padding: 15px;
+                        color :$white;
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                }
+
+                .fields .field {
+                    padding: 10px;
+
+
+                    label {
+                        color: white;
+                        font-size: 0.9rem;
+                    }
+
+                    input {
+                        background-color: $purpleAlt;
+                        border: solid 1px white;
+                        height: 30px;
+                        color: white !important;
+                    }
+
+                    textarea {
+                        background-color: $purpleAlt;
+                        border: solid 1px white;
+                        color: white !important;
+                    }
+
+
+                }
+
+                .btn {
+                    margin: 0 auto;
+                }
+            }
+            .image {
+                    display: none;
+                }
+        }
+    }
+}
+
+@media #{$medium} {
+    section.large-form {
+        .inner {
+            // display: flex;
+            // flex-direction: column;
+            min-height: 100%;
+        }
+
+       .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: stretch;
+        }
+    }
+}
+
+@media #{$large} {
+    section.large-form {
+        width: 100%;
+        padding: 0;
+        background: $purpleAlt;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: calc(50vw - 700px); // viewport minus half wrapper
+                height: 100%;
+                background: $purpleBrand;
+                z-index: 0;
+            }
+        // background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
+        //  background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
+        .wrapper {
+            max-width: 1400px; // or whatever your site uses
+            margin: 0 auto;
+            padding: 0; // IMPORTANT
+            // background: transparent;
+            background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
+
+            .inner {
+
+                @include flex(center, center row);
+                width: 100%;
+                align-self: stretch;
+                .form {
+                    background: $purpleAlt;
+                    border-radius: 0 0 180px 0;
+                    height: 760px;
+                    padding: 120px 60px;
+                    width: 100%;
+                    flex-basis: 50;
+
+                    h3 {
+                        text-align: left;
+                    }
+
+                }
+
+                .image {
+                    border-radius: 180px 0 0 0;
+                    display: block;
+                    background-color: $purpleBrand;
+                    width: 100%;
+                    min-height: 700px;
+                    flex-basis: 50;
+                    position: relative;
+                    overflow: visible;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    img {
+                        display: block;
+                        // margin-right: calc(50% - 50vw);
+                        // width: calc(50vw + 700px);
+                        position: relative;
+                        min-height: 700px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

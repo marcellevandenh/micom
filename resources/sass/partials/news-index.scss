@@ -1,0 +1,236 @@
+@import '../variables';
+
+section.blog-index {
+ 
+    .wrapper {
+        @include flex(flex-start, flex-start, column);
+
+        >* {
+            width: 100%;
+        }
+
+        .content {
+            margin-bottom: 40px;
+        }
+
+        .categories {
+            h4 {
+                @include primary(400, 1rem, $darkPurple);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .filters {
+                @include flex(center, flex-start, row, wrap);
+                gap: 8px;
+
+                .filter {
+                    padding: 16px 32px;
+                    border: solid 1px $darkPurple;
+                    text-decoration: none;
+                    transition: all .3s ease;
+
+                    &:hover, &.active {
+                        background: $purpleBrand;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .items {
+            @include flex(flex-start, center, column);
+            gap: 10px;
+
+            .item {
+                max-width: 600px;
+                width: 100%;
+                border-radius: 4px;
+                overflow: hidden;
+                background: $white;
+                // box-shadow: 0px -8px 24px 0px rgba(28, 31, 36, 0.20);
+                text-decoration: none;
+                transition: background .3s ease;
+
+                &:hover {
+                    background: $lightLilac;
+
+                    .content {
+                        .bottom {
+                            border-color: $purpleBrand;
+                        }
+                    }
+                }
+
+                .image {
+                    aspect-ratio: 1.77/1;
+                    width: 100%;
+                    background: $lilac;
+
+                    img {
+                        // @include img-fit();
+                    }
+                }
+
+                .content {
+                    padding: 24px 20px;
+
+                    h4 {
+                        margin-top: 20px;
+                        @include primary(700, 1.5rem, $darkPurple);
+                    }
+
+                    .date {
+                        padding: 5px 10px;
+                        @include primary(500, 0.7rem, white);
+                        font-size: 0.7rem;
+                    }
+
+                    .bottom {
+                        // border-top: 1px solid $purpleBrand;
+                        margin-top: 24px;
+                        padding-top: 24px;
+                        @include flex(flex-start, center, column);
+                        gap: 16px;
+                        width: 100%;
+                        transition: all .3s ease;
+
+                        p {
+                            @include flex(center, flex-start, row);
+                            gap: 8px;
+                            font-weight: 700;
+                            color: $purpleAlt;
+
+                            svg {
+                                @include svg-size(24px);
+                            }
+                        }
+
+                        .btns {
+                            width: 100%;
+
+                            .btn {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            width: 100%;
+            padding: 42px 0 0;
+            @include flex(center, center, row);
+            gap: 32px;
+
+            .next, .previous {
+                background: transparent;
+                transition: background .3s ease; 
+
+                a, span {
+                    @include flex(center, center, row);
+                }
+
+                svg {
+                    @include svg-size(24px);
+                }
+
+                &:hover {
+                    background: $lilac;
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+
+            .pages {
+                @include flex(center, center, row);
+                gap: 9px;
+
+                li {
+                    @include flex(center, center, column);
+                    width: 43px;
+                    height: 43px;
+                    background: $lightLilac;
+                    cursor: pointer;
+                    transition: background .3s ease; 
+                    
+                    &.active {
+                        background: $lilac;
+                    }
+
+                    &:hover, &:active {
+                        background: $lilac;
+                        a, span {
+                            color: $white;
+                        }
+                    }
+
+                    * {
+                        font-size: 1.125rem;
+                    }
+
+                    a {
+                        @include flex(center, center, column);
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $medium } {
+    section.blog-index {
+        .wrapper {
+            .categories {
+                .filters {
+                    gap: 16px;
+                }
+            }
+
+            .items {
+                .item {
+                    .content {
+                        .bottom {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .btns {
+                                width: auto;
+
+                                .btn {
+                                    width: fit-content;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.blog-index {
+        .wrapper {
+            .categories {
+                margin-bottom: 32px;
+            }
+            
+            .items {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 30px;
+
+                .item {
+                    flex-basis: calc(33% - 24px);
+                }
+            }
+        }
+    }
+}

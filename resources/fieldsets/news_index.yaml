@@ -1,0 +1,18 @@
+title: 'News - Index'
+fields:
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+  -
+    handle: show_categories
+    field:
+      type: toggle
+      display: 'Show Categories'
+  -
+    handle: show_count
+    field:
+      type: integer
+      display: 'Show Count'

@@ -1,0 +1,32 @@
+<section class="documents">   
+    <div class="wrapper">
+            
+        <div class="member">
+             <h4>Welcome {{ user_name }}</h4>
+        </div>
+        <div class="content">
+            {{ if grouped_documents }}
+                {{ grouped_documents }}
+                    <h4 class="subtitle">{{ category }}</h4>
+                    <ul class="items">
+                        {{ documents }}
+                            <li class="item">
+                                <p>{{ title }} </p>
+                                <a class="btn pill-btn" href="/storage/{{ filepath }}"  target="_blank">View</a>
+                            </li>
+                        {{ /documents }}
+                    </ul>
+                {{ /grouped_documents }}
+            {{ else }}
+                <p>No documents available.</p>
+            {{ /if }}
+        </div>
+        <div class="footer">
+              <form action="/members/logout" method="POST">
+                <input type="hidden" name="_token" value="{{ csrf_token }}">
+                <button class="btn pill-btn" type="submit">Logout</button>
+            </form>
+        </div>
+
+    </div>
+</section>

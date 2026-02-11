@@ -1,0 +1,148 @@
+@import '../variables';
+
+$wrapper-colors: (
+  purple:      $purple,
+  pink:        $pink,
+  yellow:      $yellow,
+  orange:      $orange,
+  green:       $green,
+  teal:        $teal,
+  blue:        $blue,
+  altOrange:   $altOrange,
+  lilac:       $lilac,
+  darkPurple:  $darkPurple,
+  altpurple:   $purpleAlt,
+  red:         $red 
+);
+
+section.services-grid {
+    // padding:0;
+   
+    .wrapper {
+        width: 100%;
+
+         &.apply-page-colour {
+            margin: 0 auto;
+            padding: 120px;
+            min-width: 100%;
+
+            // Loop through colors for background
+            @each $name, $bg-color in $wrapper-colors {
+                &.#{$name} {
+                    background: $bg-color;
+
+                    // Make text white
+                    .content p, .content h2, .content h3,
+                    .items .item .content p, .items .item .content h2, .items .item .content h3 {
+                        color: white !important;
+                    }
+
+                    .items .item .icon {
+                        background-color: white;
+
+                        path {
+                            fill:$bg-color;
+                        }
+                    }
+            
+                }
+            }
+        }
+
+        >.content {
+            text-align: center;
+            margin-bottom: 48px;
+        
+            margin: auto; 
+
+            h3 {
+               @include primary($fw: 700, $fs: 1.8rem, $c:$darkPurple);
+
+            }
+        }
+
+        .items {
+            @include flex(flex-start, center, row, wrap);
+            gap: 48px;
+
+            .item {
+                @include flex(center, center, column);
+                gap: 24px;
+                flex-basis: 100%;
+                width: 100%;
+                max-width: 400px;
+
+                .icon {
+                    width: 100px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 10px 10px 15px rgba($black, .15);
+                    padding: 22px;
+
+                        &.purple {background: $purple; } 
+                        &.pink  { background: $pink; }   
+                        &.yellow { background: $yellow; } 
+                        &.orange { background: $orange; } 
+                        &.green  { background:$green; } 
+                        &.blue { background: $blue; } 
+                        &.teal  { background: $teal; } 
+                        &.altOrange { background: $altOrange; } 
+                        &.lilac{ background: $lilac; } 
+                        &.darkPurple{ background: $darkPurple; } 
+                        &.purpleAlt { background: $purpleAlt; }   
+                        &.red { background: $red; }     
+                }
+
+                .content {
+                    text-align: center;
+
+                    &.purple { h3 { color: $purple; } }
+                    &.pink { h3 { color: $pink; }   }
+                    &.yellow { h3 { color: $yellow; } }
+                    &.orange { h3 { color: $orange; } }
+                    &.green { h3 { color: $green; } }
+                    &.teal { h3 { color: $teal; } }
+                    &.blue { h3 { color: $blue; } }
+                    &.altOrange { h3 { color: $altOrange; } }                    
+                    &.red { h3 { color: $red; } }        
+
+                    h3 {
+                        @include secondary();
+                        font-weight: 800;
+                        letter-spacing: 1px;
+                        font-size: 1.15rem;
+                    }
+
+                    p {
+                        @include primary($fw: 400, $fs: 1rem, $c: $black);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{ $large } {
+    section.services-grid {
+        .wrapper {
+
+            &.apply-page-colour {
+                padding-top: 50px;
+
+            }
+
+            >.content {
+                  max-width: 60%;
+            }
+
+            .items {
+                margin-top: 40px;
+                gap: 90px;
+
+                .item {
+                    flex-basis: calc(30% - 45px);
+                }
+            }
+        }
+    }
+}

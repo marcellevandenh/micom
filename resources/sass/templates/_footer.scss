@@ -1,16 +1,80 @@
 @import '../variables';
 
 footer {
+    padding: 32px 16px;
+    background: $lightLilac;
+   
+    
+    @include flex(center, center, column);
+    gap: 32px;
+
     .top {
-        padding: 0 16px;
-        
+        width: 100%;
+
         .wrapper {
             @include flex(center, center, column);
             gap: 16px;
+
+            .logo, .logo img {
+                @include svg-size(fit-content, 50px);
+            }
+
+            a, p {
+                @include primary(400, 1rem, $black);
+             
+            }
+
+            .address {
+                p {
+                    white-space: break-spaces;
+                }
+            }
+
+            >* {
+                @include flex(center, center, column);
+                text-align: center;
+
+                h4 {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+
+                p, a {
+                    margin-bottom: 4px;
+                    text-decoration: none;
+                }
+            }
+
+            .links {
+                @include flex(center, center, column);
+
+                .accordion-wrapper {
+                    border-bottom: 0;
+
+                    .accordion {
+                        a {
+                            @include flex(center, flex-start, row);
+                            color: $black;
+                            position: relative;
+                            text-decoration: none;
+
+                            svg {
+                                @include svg-size(fit-content, 24px);
+                            }
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     .bottom {
+        width: 100%;
         padding: 16px;
 
         .wrapper {
@@ -18,7 +82,7 @@ footer {
             gap: 15px;
             
             .copyright {
-                @include primary(400, 1rem, $black);
+                @include primary(500, 1rem, $darkPurple);
                 margin-bottom: 0;
             }
     
@@ -27,7 +91,7 @@ footer {
                 gap: 6px;
     
                 * {
-                    @include primary(400, 1rem, $black);
+                    @include primary(500, 1rem, $darkPurple);
                     margin-bottom: 0;
                 }
     
@@ -35,12 +99,13 @@ footer {
                     @include svg-size(110px, 28px);
 
                     path {
+                        fill: $brandLight;
                         transition: all .3s ease;
                     }
     
                     &:hover {
                         path {
-                            fill: $white;
+                            fill: $purpleBrand;
                         }
                     }
                 }
@@ -52,8 +117,6 @@ footer {
 @media #{ $medium } {
     footer {
         .bottom {
-            padding: 16px 32px;
-
             .wrapper {
                 .surge {
                     @include flex(center, center, $fd: row);
@@ -66,6 +129,41 @@ footer {
 
 @media #{ $large } {
     footer {
+        border-top: 5px solid $darkPurple;
+        padding: 64px 16px 32px;
+        gap: 64px;
+
+        .top {
+            .wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 32px;
+
+                p {
+                    color: $black;
+                }
+                .logo, .logo img {
+                    @include svg-size(fit-content, 71px);
+                }
+
+                * {
+                    text-align: left;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+
+                .links {
+                    align-items: flex-start;
+                }
+
+                .contact {
+                    a {
+                         color:$black;
+                    }
+                }
+            }
+        }
         .bottom {
             .wrapper {
                 flex-direction: row;

@@ -1,0 +1,13 @@
+title: 'Sub Heading'
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: SubTitle
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content

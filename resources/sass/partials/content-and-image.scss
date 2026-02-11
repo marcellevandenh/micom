@@ -1,0 +1,108 @@
+@import '../variables';
+
+section.content-and-image {
+
+
+        position: relative;
+        overflow: hidden;
+
+        .inner {
+            background-color: white;
+            .content {
+                
+                padding-bottom: 30px;
+                    &.purple { h3 { color: $purple; } }
+                    &.pink { h3 { color: $pink; }   }
+                    &.yellow { h3 { color: $yellow; } }
+                    &.orange { h3 { color: $orange; } }
+                    &.green { h3 { color: $green; } }
+                    &.teal { h3 { color: $teal; } }
+                    &.blue { h3 { color: $blue; } }
+                    &.altOrange { h3 { color: $altOrange; } }   
+                    &.red { h3 { color: $red; } }   
+            }
+        }
+    
+}
+
+
+@media #{$large} {
+    section.content-and-image {
+        padding: 60px 0px;
+
+        .inner {
+            @include flex(flex-start, flex-start);
+            flex-basis: 100%;
+            align-self: stretch;
+            box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            margin: 0 auto;
+            padding: 0 0;
+            // justify-items: flex-start;
+            flex-direction: row-reverse;     
+            max-width: 80%;    
+            overflow: hidden;
+    
+            &.inverse-order
+            {
+                flex-direction: row; 
+
+                &.shape-bgs {
+                    border-radius:  0 0 120px 0;
+                }
+            }
+
+            &.shape-bgs {
+                border-radius: 120px 0 0 0;
+            }
+
+           
+    
+            .content {
+                margin: 1.8rem;
+                width: 100%;
+                padding-bottom: 0px;
+
+                &.purple { h3 { color: $purple; } }
+                &.pink { h3 { color: $pink; }   }
+                &.yellow { h3 { color: $yellow; } }
+                &.orange { h3 { color: $orange; } }
+                &.green { h3 { color: $green; } }
+                &.teal { h3 { color: $teal; } }
+                &.blue { h3 { color: $blue; } }
+                &.altOrange { h3 { color: $altOrange; } } 
+                &.red { h3 { color: $red; } }
+
+                h3 {
+                    font-size: 1.5rem;
+                    line-height: 56px;
+                    margin-bottom: 0;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 1.2rem;
+                    color: rgb(77, 77, 77);
+                    line-height: 1.5rem;
+                }
+            }
+
+            .image {
+
+                width: 100%;
+                height:auto;
+                // aspect-ratio: 16 / 14;
+                overflow: hidden ;
+                align-self: stretch;
+               
+                img {
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                }
+               
+            }
+
+        }
+    }
+}
+

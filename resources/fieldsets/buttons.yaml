@@ -3,23 +3,36 @@ fields:
   -
     handle: buttons
     field:
-      mode: stacked
-      type: grid
-      display: Buttons
       fields:
         -
           handle: icon
           field:
             max_files: 1
+            mode: list
             container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
             type: assets
             display: Icon
             width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
         -
           handle: text
           field:
+            input_type: text
+            antlers: false
             type: text
             display: Text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
             validate:
               - required
             width: 50
@@ -29,29 +42,46 @@ fields:
             type: link
             display: Link
             width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+        -
+          handle: new_window
+          field:
+            default: false
+            type: toggle
+            display: 'New Window'
+            width: 50
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
         -
           handle: asset
           field:
             max_files: 1
+            mode: list
             container: assets
+            restrict: false
+            allow_uploads: true
+            show_filename: true
+            show_set_alt: true
             type: assets
             display: Asset
             width: 50
-        -
-          handle: new_tab
-          field:
-            type: toggle
-            display: 'New Tab'
-            width: 33
-        -
-          handle: pill_styling
-          field:
-            type: toggle
-            display: 'Pill Styling'
-            width: 33
-        -
-          handle: outline_styling
-          field:
-            type: toggle
-            display: 'Outline Styling'
-            width: 33
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+      mode: stacked
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Buttons
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      replicator_preview: true

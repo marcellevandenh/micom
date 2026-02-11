@@ -1,0 +1,34 @@
+title: 'Call to Action'
+fields:
+  -
+    handle: content
+    field:
+      buttons:
+        - h3
+        - h4
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+  -
+    import: buttons
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: apply_page_colour
+    field:
+      type: toggle
+      display: 'Apply Page Colour'

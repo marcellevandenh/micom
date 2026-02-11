@@ -11,6 +11,8 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
           -
             import: page_builder
   seo:
@@ -30,6 +32,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:

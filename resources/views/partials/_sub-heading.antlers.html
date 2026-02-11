@@ -1,0 +1,12 @@
+<section class="sub-heading">
+    <div class="wrapper">
+        <div class="content">
+            {{ if subtitle }}
+                <p class="subtitle  {{ page_colour ?= page_colour|slugify }}">
+                    {{ subtitle }}
+                </p>
+            {{ endif }}
+            {{ content ? content : '' }}
+        </div>
+    </div>
+ </section>   

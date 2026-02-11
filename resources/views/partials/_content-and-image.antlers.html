@@ -1,0 +1,30 @@
+{{ if content_and_image }}
+    {{ content_and_image }}
+    <section class="content-and-image ">
+        <div class="inner {{ if inverse_order }} inverse-order {{endif}}  {{ if shape_backgrounds }}shape-bgs{{ endif }}">
+            <div class="content {{ page_colour ?= page_colour|slugify }} ">
+                {{ if content }}
+                    {{ content }}
+                {{ endif }}
+                {{ if buttons }}
+                    {{ buttons }}
+                        <a href="{{ link }}" class="btn">{{ text }}</a>
+                    {{ /buttons }}
+                {{ endif }}
+            </div>
+                
+            <div class="image">
+                {{  if image }}
+                    <picture>
+                        <source media="(min-width: 576px)" srcset="{{ glide:image height='900' format='webp' quality='85' }}" type="image/webp">
+                        <source media="(max-width: 576px)" srcset="{{ glide:image height='531' format='webp' quality='85' }}" type="image/webp">
+                        <img loading="lazy" src="{{ image }}" width="{{ image:width }}" height="{{ image:height }}" alt="{{ image:alt }}">
+                    </picture>
+                {{ endif }}
+            </div><!--image-->
+            
+        </div><!--inner-->
+       
+    </section><!--content-and-image-->
+    {{ /content_and_image }}
+{{ endif }}

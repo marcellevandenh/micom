@@ -1,0 +1,63 @@
+title: 'Values Grid'
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Subtitle
+  -
+    import: color
+  -
+    handle: content
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      buttons:
+        - h2
+        - h3
+        - h4
+        - h5
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+  -
+    handle: items
+    field:
+      type: replicator
+      display: Items
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            items:
+              display: Items
+              fields:
+                -
+                  handle: subtitle_item
+                  field:
+                    type: text
+                    display: 'Subtitle Item'
+                    width: 75
+                -
+                  handle: content
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content
+                    width: 75
+                -
+                  import: color
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Icon

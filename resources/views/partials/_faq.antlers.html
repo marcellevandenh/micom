@@ -1,0 +1,23 @@
+<section class="faq-list">
+    <div class="wrapper">
+        <div class="accordion-container">
+                   {{ faq }}
+                <div class="accordion-wrapper {{ first ? 'open' : '' }}">
+                    <div class="accordion">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M3.48531 6.99767C2.99531 7.48767 2.99531 8.27767 3.48531 8.76767L11.7953 17.0777C12.1853 17.4677 12.8153 17.4677 13.2053 17.0777L21.5153 8.76767C22.0053 8.27767 22.0053 7.48767 21.5153 6.99767C21.0253 6.50767 20.2353 6.50767 19.7453 6.99767L12.4953 14.2377L5.24531 6.98767C4.76531 6.50767 3.96531 6.50767 3.48531 6.99767Z" fill="#F9F7F5"/>
+                        </svg>
+                        <h4>{{ title }}</h4>
+
+                       
+                    </div>
+                    <div class="panel">
+                        <div class="content">
+                            {{ content }}
+                        </div>
+                    </div>
+                </div>
+                {{ /faq }}
+        </div>
+    </div>
+</section>
