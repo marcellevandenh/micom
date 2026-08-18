@@ -8,11 +8,28 @@ const initHeader = (header) => {
         const menu = header.querySelector('.menu');
 
         if (burger && menu) {
+            const setMenuState = (isOpen) => {
+                document.body.classList.toggle('no-scroll', isOpen);
+                burger.classList.toggle('open', isOpen);
+                menu.classList.toggle('active', isOpen);
+                burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                burger.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+            };
+
             burger.addEventListener('click', () => {
-                document.body.classList.toggle('no-scroll');
-                burger.classList.toggle('open');
-                menu.classList.toggle('active');
-            })
+                setMenuState(!menu.classList.contains('active'));
+            });
+
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => setMenuState(false));
+            });
+
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape' && menu.classList.contains('active')) {
+                    setMenuState(false);
+                    burger.focus();
+                }
+            });
         }
     }
 }

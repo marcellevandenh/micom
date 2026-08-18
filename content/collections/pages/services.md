@@ -13,200 +13,12 @@ scripts:
   code: null
   mode: htmlmixed
 updated_by: 1
-updated_at: 1770725061
+updated_at: 1787050630
 page_builder:
   -
-    id: memwwe4n
-    subtitle: 'OUR CORE VALUES'
-    content:
-      -
-        type: heading
-        attrs:
-          level: 1
-        content:
-          -
-            type: text
-            text: 'We aim to provide the best possible services to our patients to improve the health, well-being and lives of those we care for'
-    type: hero_solid
-    enabled: true
-    colour: altpurple
-  -
-    id: memxliwr
-    subtitle: 'OUR SERVICES'
-    content:
-      -
-        type: heading
-        attrs:
-          level: 3
-        content:
-          -
-            type: text
-            text: 'Improving the health, well-being and lives of those patients we care for with:'
-    items:
-      -
-        id: memxlu0p
-        colour: purple
-        icon:
-          - receptionist.jpg
-        subtitle: 'GP ENHANCED ACCESS'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: !!binary UGF0aWVudHMgaW4gU291dGggVGVlcyBjYW4gbm93IGFjY2VzcyADR1AgYXBwb2ludG1lbnRzIGR1cmluZyBldmVuaW5ncyBhbmQgd2Vla2VuZHMgYXMgcGFydCBvZiBvdXIgZXh0ZW5kZWQgA2hvdXJzIHNlcnZpY2UuIFRoZXNlIG91dC1vZi1ob3VycyBhcHBvaW50bWVudHMgb2ZmZXIgZ3JlYXRlciBmbGV4aWJpbGl0eS4=
-        type: items
-        enabled: true
-        image: clocksvg.svg
-      -
-        id: memxu4u0
-        colour: yellow
-        icon:
-          - heart.svg
-        subtitle: CHERRS
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: !!binary UHJvdmlkaW5nIGEgcmFwaWQgcmVzcG9uc2UgdXJnZW50IANhbmQgdW5zY2hlZHVsZWQgY2FyZSB2aXNpdGluZyBzZXJ2aWNlIHN0YWZmZWQgYnkgZXhwZXJpZW5jZWQgQ2xpbmljYWwgUHJhY3RpdGlvbmVycyB0byBzdXBwb3J0IHBhdGllbnRzIGluIGNhcmUgaG9tZXMgd2l0aCBhY3V0ZSBwcmVzZW50YXRpb25zIG9mIGluanVyeSBvciBpbGxuZXNzLg==
-        buttons:
-          -
-            id: memxuqmv
-            text: 'View Service'
-            new_window: false
-            link: 'entry::27e0d856-73e3-45bc-99ce-fbfd5d134c1b'
-        type: items
-        enabled: true
-        image: heartsvg.svg
-      -
-        id: mepfd2w3
-        colour: blue
-        subtitle: 'SEXUAL HEALTH'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna liquam erat volutpat. '
-        buttons:
-          -
-            id: mepfe3fx
-            text: 'View Service'
-            new_window: false
-            link: 'entry::acac4061-408b-44f0-813f-01f45ea5d625'
-        type: items
-        enabled: true
-        image: sexualhealth.svg
-      -
-        id: mepisart
-        colour: teal
-        subtitle: 'RAVENSCAR SURGERY'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna liquam erat volutpat. '
-        buttons:
-          -
-            id: mepisy5g
-            text: 'View Service'
-            new_window: false
-            link: 'entry::f9fdc8ed-289e-4eb6-9961-31f0e88792d0'
-        type: items
-        enabled: true
-        image: homesvg.svg
-      -
-        id: mgunxv1x
-        colour: orange
-        image: learning.svg
-        subtitle: 'PROTECTED LEARNING TIME'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna liquam erat volutpat. '
-        type: items
-        enabled: true
-        buttons:
-          -
-            id: mguz8r9h
-            text: 'View Service'
-            link: 'entry::1d581b92-cd04-43fe-afde-778db935b772'
-            new_window: false
-      -
-        id: mepitxwl
-        colour: green
-        subtitle: 'ACUTE RESPIRATORY INFECTION'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: !!binary VGhlIEFjdXRlIFJlc3BpcmF0b3J5IEluZmVjdGlvbiAoQVJJKSBIdWIgA2lzIG1hbmFnZWQgYnkgYSBkZWRpY2F0ZWQgdGVhbSBvZiBleHBlcmllbmNlZCBoZWFsdGhjYXJlIHByb2Zlc3Npb25hbHMsIGluY2x1ZGluZyBHZW5lcmFsIFByYWN0aXRpb25lcnMgKEdQcykgYW5kIEFkdmFuY2VkIE51cnNlIFByYWN0aXRpb25lcnMgKEFOUHMpLg==
-        buttons:
-          -
-            id: mepiuylf
-            text: 'View Service'
-            new_window: false
-            link: 'entry::0c652775-df7a-4266-a8fb-23729053dff1'
-        type: items
-        enabled: true
-        image: bacteria.svg
-      -
-        id: mepiv9qs
-        colour: red
-        subtitle: 'MINOR SKIN SERVICE'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: !!binary VGhlIE1pbm9yIFNraW4gc2VydmljZSBvcGVyYXRlcyBmcm9tIAN3aXRoaW4gdGhlIFJlZGNhciBQcmltYXJ5IENhcmUgSG9zcGl0YWwuIANJdCBpcyBkZWxpdmVyZWQgZnJvbSBhIGRlZGljYXRlZCB0aGVhdHJlIGFkamFjZW50IHRvIHRoZSBSYXZlbnNjYXIgTWVkaWNhbCBQcmFjdGljZS4=
-        buttons:
-          -
-            id: mepivps4
-            text: 'View Service'
-            new_window: false
-            link: 'entry::f8d2326a-e192-49f0-ab27-af82c16bd42c'
-        type: items
-        enabled: true
-        image: plastersvg.svg
-      -
-        id: mguolpu9
-        colour: pink
-        image: heartsvg.svg
-        subtitle: 'NEW SERVICE'
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna liquam erat volutpat. '
-        type: items
-        enabled: true
-        buttons:
-          -
-            id: mguz9scm
-            text: 'View Service'
-            new_window: false
-            link: 'entry::b0409883-5b1b-4cc2-8d1e-846f97147cf2'
-    type: services_card_grid
-    enabled: true
-  -
-    id: mepk43nq
-    background_image: doctor-female.jpg
-    subtitle: 'SUB HEADING'
+    id: serviceshero
+    colour: grey
+    subtitle: 'Our Services'
     content:
       -
         type: heading
@@ -215,8 +27,263 @@ page_builder:
         content:
           -
             type: text
-            text: 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpersuscipit lobortis nisl ut aliquip ex ea commodo consequat.'
-    type: hero
+            text: 'Practical, professional support for properties of every size.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Maintenance, repairs and refurbishment delivered across Darlington, County Durham and the wider North East.'
+    type: hero_solid
     enabled: true
-    textbox: true
+    image: kitchen_damian.jpeg
+    image_full_bleed: false
+  -
+    id: servicesall
+    subtitle: 'WHAT WE DO'
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'One trusted contact for the work your property needs.'
+    items:
+      -
+        id: servicegeneral
+        colour: orange
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'General Maintenance'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Reactive repairs, emergency call-outs, routine upkeep and preventative maintenance for homes and managed properties.'
+        type: items
+        enabled: true
+      -
+        id: servicerefurb
+        colour: blue
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: Refurbishments
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Full property refurbishments, including kitchen and bathroom upgrades and coordinated finishing work.'
+        type: items
+        enabled: true
+      -
+        id: servicespecialist
+        colour: green
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Specialist Trades'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Plumbing repairs, electrical coordination and skilled carpentry managed through one dependable contact.'
+        type: items
+        enabled: true
+      -
+        id: servicedecorating
+        colour: orange
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: Decorating
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Interior and exterior painting, decorating, touch-ups and professional spray painting.'
+        type: items
+        enabled: true
+      -
+        id: serviceturnaround
+        colour: blue
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Property Turnarounds'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'End-of-tenancy repairs, maintenance and decorating to get properties ready for their next occupants.'
+        type: items
+        enabled: true
+      -
+        id: serviceholiday
+        colour: green
+        content:
+          -
+            type: heading
+            attrs:
+              level: 3
+            content:
+              -
+                type: text
+                text: 'Short-Term & Holiday Lets'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Maintenance support and service plans that help resolve problems quickly and reduce disruption to guests.'
+        type: items
+        enabled: true
+    type: services_grid
+    enabled: true
+    apply_page_colour: false
+  -
+    id: holidaycontent
+    subtitle: 'MAINTENANCE PARTNERSHIPS'
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Reliable support for holiday lets and property portfolios.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'When you manage guest accommodation, even a small fault can lead to disruption, complaints or lost bookings. Micom can act as your dedicated maintenance partner, helping with property inspections, minor plumbing and electrical maintenance, doors and locks, furniture and fittings, decorating touch-ups and maintenance between guest stays.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'For multiple properties, we can provide one point of contact across your portfolio and agree a service plan that fits the way you operate.'
+    buttons:
+      -
+        id: servicecontact
+        text: 'Discuss your properties'
+        link: 'entry::500d4144-7261-4f2a-97da-e2033ceb68fb'
+        new_window: false
+    add_padding: false
+    type: content_block
+    enabled: true
+  -
+    id: servicesfaq
+    faq:
+      -
+        id: faqservices
+        title: 'What property maintenance services do you provide?'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We provide reactive repairs, plumbing and electrical maintenance, painting and decorating, end-of-tenancy refurbishments, preventative maintenance programmes and emergency call-outs.'
+        type: new_set
+        enabled: true
+      -
+        id: faqareas
+        title: 'Which areas do you cover?'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'We are based in Darlington and work across County Durham and the wider North East, including Stockton-on-Tees, Newton Aycliffe, Bishop Auckland, Durham, Middlesbrough, Richmond, Yarm and surrounding areas.'
+        type: new_set
+        enabled: true
+      -
+        id: faqinsured
+        title: 'Are you insured?'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Yes. Micom Property is insured, giving you reassurance while work is carried out at your property.'
+        type: new_set
+        enabled: true
+      -
+        id: faqcontracts
+        title: 'Can you provide ongoing maintenance support?'
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Yes. Long-term maintenance arrangements are available for landlords, letting agents, property managers and multi-property portfolios.'
+        type: new_set
+        enabled: true
+    type: faq
+    enabled: true
+  -
+    id: servicescta
+    content:
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: 'Not sure which service you need?'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Tell us about the property and the problem. We will recommend a practical next step.'
+    buttons:
+      -
+        id: servicesgetintouch
+        text: 'Get in touch'
+        link: 'entry::500d4144-7261-4f2a-97da-e2033ceb68fb'
+        new_window: false
+    apply_page_colour: false
+    type: call_to_action
+    enabled: true
 ---

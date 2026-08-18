@@ -8,7 +8,7 @@ section.large-form {
         width: 100%;
         margin: 0 auto;
         padding: 30px;
-        background: $purpleAlt;
+        background: $brandLight;
         .inner {
 
             .form {
@@ -17,9 +17,9 @@ section.large-form {
                 .subtitle {
                     h4 {
                         padding: 15px;
-                        color :$white;
+                        color :$brandDark;
                         font-weight: 700;
-                        font-size: 1rem;
+                        font-size: 2rem;
                     }
                 }
 
@@ -28,21 +28,21 @@ section.large-form {
 
 
                     label {
-                        color: white;
+                        color: $brandDark;
                         font-size: 0.9rem;
                     }
 
                     input {
-                        background-color: $purpleAlt;
-                        border: solid 1px white;
+                        background-color: $white;
+                        border: solid 1px black;
                         height: 30px;
-                        color: white !important;
+                        color: $brandDark !important;
                     }
 
                     textarea {
-                        background-color: $purpleAlt;
-                        border: solid 1px white;
-                        color: white !important;
+                        background-color: $white;
+                        border: solid 1px black;
+                        color: $brandDark !important;
                     }
 
 
@@ -79,7 +79,7 @@ section.large-form {
     section.large-form {
         width: 100%;
         padding: 0;
-        background: $purpleAlt;
+        background: $brandDark;
 
             &::after {
                 content: '';
@@ -88,17 +88,16 @@ section.large-form {
                 right: 0;
                 width: calc(50vw - 700px); // viewport minus half wrapper
                 height: 100%;
-                background: $purpleBrand;
+                background: $brandDark;
                 z-index: 0;
             }
-        // background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
-        //  background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
+
         .wrapper {
             max-width: 1400px; // or whatever your site uses
             margin: 0 auto;
             padding: 0; // IMPORTANT
             // background: transparent;
-            background: linear-gradient(-180deg, $purpleAlt,$purpleAlt,$purpleBrand, $purpleBrand);
+            background: linear-gradient(-180deg, $brandDark,$brandDark,$brandLight, $brandLight);
 
             .inner {
 
@@ -106,7 +105,7 @@ section.large-form {
                 width: 100%;
                 align-self: stretch;
                 .form {
-                    background: $purpleAlt;
+                    background: $brandLight;
                     border-radius: 0 0 180px 0;
                     height: 760px;
                     padding: 120px 60px;
@@ -124,7 +123,7 @@ section.large-form {
                     display: block;
                     background-color: $purpleBrand;
                     width: 100%;
-                    min-height: 700px;
+                    height: 760px;
                     flex-basis: 50;
                     position: relative;
                     overflow: visible;
@@ -138,7 +137,7 @@ section.large-form {
                         // margin-right: calc(50% - 50vw);
                         // width: calc(50vw + 700px);
                         position: relative;
-                        min-height: 700px;
+                        height: 760px;
                         object-fit: cover;
                     }
                 }

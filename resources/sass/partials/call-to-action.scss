@@ -1,14 +1,15 @@
 @import '../variables';
 
 section.call-to-action {
-  
+
     .wrapper {
         @include flex(center, space-between, column, wrap);
         position: relative;
 
         .content {
 
-            background: linear-gradient(-90deg, $purpleBrand, $darkPurple);
+            background: linear-gradient(-90deg, $orangeBrand, $black);
+            background: $brandDark;
             &.apply-page-colour {
                 .btn {
                     background: none;
@@ -17,34 +18,41 @@ section.call-to-action {
                         border: solid 2px white;
                     }
                 }
-                &.purple {background: $purple; } 
-                &.pink  { background: $pink; }   
-                &.yellow { background: $yellow; } 
-                &.orange { background: $orange; } 
-                &.green  { background:$green; } 
-                &.blue { background: $blue; } 
-                &.teal  { background: $teal; } 
-                &.altOrange { background: $altOrange; } 
-                &.lilac{ background: $lilac; } 
-                &.darkPurple{ background: $darkPurple; } 
-                &.purpleAlt { background: $purpleAlt; } 
-                &red { background: $red;} 
+                &.purple {background: $purple; }
+                &.pink  { background: $pink; }
+                &.yellow { background: $yellow; }
+                &.orange { background: $orange; }
+                &.green  { background:$green; }
+                &.blue { background: $blue; }
+                &.teal  { background: $teal; }
+                &.altOrange { background: $altOrange; }
+                &.lilac{ background: $lilac; }
+                &.darkPurple{ background: $darkPurple; }
+                &.purpleAlt { background: $purpleAlt; }
+                &red { background: $red;}
             }
-  
+
 
             border-radius: 20px;
             padding: 30px 20px;
-            
+
             h3 {
                 color: $white;
             }
 
             h4 {
                 color: $white;
-                font-weight: 700; 
+                font-weight: 700;
                 line-height: 150%;
                 // font-size: 30px;
                 font-size: 1.9rem;
+            }
+
+            p {
+                color: $white;
+                font-weight: 400;
+                line-height: 150%;
+                font-size: 1.125rem;
             }
 
             .btn {
@@ -72,7 +80,7 @@ section.call-to-action {
 @media #{ $large } {
     section.call-to-action {
         .wrapper {
-           
+
             .content {
 
                 // padding: 48px 100px 48px 48px;
@@ -91,14 +99,15 @@ section.call-to-action {
 
                 h4 {
                     color: $white;
-                    font-weight: 700; 
+                    font-weight: 700;
                 }
 
                 .btn { // target your button
                     margin-right: 0; // pushes it to the far right
+                    text-wrap:nowrap;
                 }
             }
-            
+
             .image {
                 display: block;
                 width: 100%;

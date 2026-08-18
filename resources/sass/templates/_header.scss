@@ -42,7 +42,17 @@ header {
                     $height: 28px;
                     $spanHeight: 5px;
                     $midSpanTop: math.div($height - $spanHeight, 2);
-                    $color: $black;
+                    $color: $white;
+                    appearance: none;
+                    background: transparent;
+                    border: 0;
+                    padding: 8px;
+                    cursor: pointer;
+
+                    &:focus-visible {
+                        outline: 2px solid $orange;
+                        outline-offset: 4px;
+                    }
 
                     .burger-icon {
                         width: $width;
@@ -101,27 +111,41 @@ header {
             }
 
             .menu {
-                @include pos-fix(calc((-100vh + $nav-height-sm*2)));
+                position: fixed;
+                top: $nav-height-sm;
+                right: -100%;
                 width: 100%;
                 height: calc(100vh - $nav-height-sm);
-                background: darkgray;
+                background: $black;
                 z-index: -1;
-                transition: top .5s ease-out, left .5s ease-out;
-                padding: 50px 52px 91px;
-                overflow: scroll;
+                visibility: hidden;
+                opacity: 0;
+                transition: right .35s ease, opacity .25s ease, visibility .35s;
+                padding: 40px 24px 64px;
+                overflow-y: auto;
 
                 &.active {
-                    top: $nav-height-sm;
+                    right: 0;
+                    visibility: visible;
+                    opacity: 1;
                 }
 
                 .accordion-wrapper {
                     border: none;
 
                     * {
-                        @include primary(600, 1.25rem, darkgrey);
+                        @include primary(600, 1.25rem, $white);
                         text-decoration: none;
-                        text-transform: uppercase;
+                        text-transform: none;
                         letter-spacing: 1px;
+                    }
+
+                    a {
+                        &.current,
+                        &:hover,
+                        &:focus-visible {
+                            color: $orange;
+                        }
                     }
 
                     .accordion {
@@ -158,11 +182,10 @@ header {
             .inner {
                 .menu {
                     max-width: 425px;
-                    top: $nav-height-sm;
-                    left: -425px;
+                    right: -425px;
 
                     &.active {
-                        left: 0;
+                        right: 0;
                     }
                 }
             }
@@ -197,6 +220,8 @@ header {
                     padding: 0;
                     overflow: visible;
                     background: unset;
+                    visibility: visible;
+                    opacity: 1;
 
                     .btn {
                         margin-top: 0;

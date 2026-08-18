@@ -39,3 +39,33 @@ fields:
               fields:
                 -
                   import: services_card_grid
+            content_block:
+              display: 'Content Block'
+              fields:
+                -
+                  import: content_block
+            plain_content:
+              display: 'Plain Content'
+              fields:
+                -
+                  import: plain_content
+            values_grid:
+              display: 'Values Grid'
+              fields:
+                -
+                  import: values_grid
+            call_to_action:
+              display: 'Call To Action'
+              fields:
+                -
+                  import: call_to_action
+            sub_heading:
+              display: 'Sub Heading'
+              fields:
+                -
+                  import: sub_heading
+            faq:
+              display: FAQ
+              fields:
+                -
+                  import: faq

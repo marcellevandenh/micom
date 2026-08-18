@@ -1,7 +1,7 @@
 @import '../variables';
 
 section.faq-list {
-  
+
     padding: 40px 40px;
     margin-bottom: 80px;
 
@@ -11,19 +11,19 @@ section.faq-list {
 
             .accordion-wrapper {
                 border-color: $white;
-                
+
                 padding: 20px 0;
 
                 &.open {
                     .accordion {
-                        background: $lightLilac;
-                        color: $purpleBrand;
+                        background: $brandLight;
+                        color: $orange;
                         border-radius: 5px 0 0 0 ;
-                        border-left: 6px solid $lilac; /* darker purple */
+                        border-left: 6px solid $orange; /* darker purple */
                         h4 {
-                           color: $purpleBrand; 
+                           color: $brandDark;
                         }
-                        
+
                         svg {
                             transform: rotate(180deg);
                         }
@@ -33,14 +33,14 @@ section.faq-list {
                 .accordion {
                     background: $lightLilac;
                     border-radius: 5px 0 0 5px;
-                    border-left: 6px solid $lilac; /* darker purple */
+                    border-left: 6px solid $orange; /* darker purple */
                     padding: 1rem;
                     align-items: center;
                     transition: background .3s ease;
                     justify-content: left;
 
                     h4 {
-                        color: $darkPurple;
+                        color: $orange;
                         font-weight: 700;
                         font-size: 1.2rem;
                         margin-bottom: 0;
@@ -61,10 +61,10 @@ section.faq-list {
                 .panel {
                     background: $lightLilac;
                     border-radius: 0 0 0 5px;
-                    border-left: 6px solid $lilac; /* darker purple */
+                    border-left: 6px solid $orange; /* darker purple */
                     .content {
                         padding: 1rem;
-                        
+
                         p {
                             font-size: 1.125rem;
                             margin-bottom: 16px;
@@ -92,7 +92,7 @@ section.faq-list {
 @media #{ $medium } {
     section.faq-list {
         .wrapper {
-            .accordion-container {    
+            .accordion-container {
                 .accordion-wrapper {
                     .accordion {
                         padding: 1rem 1rem 1rem;
@@ -117,14 +117,14 @@ section.faq-list {
         padding: 20px 16px;
 
         .wrapper {
-            .accordion-container {  
+            .accordion-container {
                 border-radius: 20px;
 
                 .accordion-wrapper {
-                       
+
                     .accordion {
                         padding: 2rem 2rem 2rem;
-                  
+
                     }
                     .panel {
                         .content {
@@ -134,6 +134,6 @@ section.faq-list {
                 }
             }
         }
-       
+
     }
 }

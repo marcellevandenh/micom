@@ -1,7 +1,7 @@
 {{ if form:handle }}
     <section class="large-form">
-        <div class="wrapper"> 
-         
+        <div class="wrapper">
+
             {{ form:create :in="form:handle" error="#form" redirect="{{ redirect_url ? redirect_url : '/thank-you' }}" }}
                 {{ sections }}
                    <div class="inner"> {{# flex parent#}}
@@ -14,7 +14,7 @@
                             {{endif}}
 
                         <div class="fields">
-                           
+
                             {{ fields }}
                                 <div class="field {{ type }} {{ width ? 'flex-{{width}}' : 'flex-100'}}">
                                     <label for="{{ handle }}">{{ display }}{{ validate ? '<span>*</span>' : '' }} {{ prepend ? '<span>({ prepend })</span>' : '' }}</label>
@@ -24,13 +24,13 @@
                             {{ /fields }}
                              <button type="submit" id="submit-btn" class="btn pill-btn">SEND MESSAGE</button>
                         </div>
-                        
+
 
                         <div class="form-footer">
                             <div class="captcha">
                                 {{ nocache }}
                                     {{ captcha }}
-                                    
+
                                     {{ if error:captcha }}
                                         <p class="error">{{ error:captcha }}</p>
                                     {{ /if }}
@@ -50,7 +50,7 @@
                 </div>
                 {{ /sections }}
             {{ /form:create }}
-          
+
         </div>
     </section>
 {{ endif }}
