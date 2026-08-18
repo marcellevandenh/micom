@@ -40,6 +40,9 @@ fields:
         -
           key: red
           value: Red
+        -
+          key: grey
+          value: Grey
       type: select
       display: Colour
       width: 50

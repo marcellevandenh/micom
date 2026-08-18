@@ -5,8 +5,6 @@
                 {{ if company_info:logo }}
                     <a href="/">
                         <picture>
-                            <source media="(min-width: 1200px)" srcset="{{ glide:company_info:logo height='142' }}" type="image/webp">
-                            <source media="(max-width: 1199px)" srcset="{{ glide:company_info:logo height='100' }}" type="image/webp">
                             <img src="{{ company_info:logo }}" width="{{ company_info:logo:width }}" height="{{ company_info:logo:height }}" alt="{{ company_info:logo:alt }}">
                         </picture>
                     </a>
@@ -26,22 +24,22 @@
                         </a>
                     {{ endif }} -->
 
-                    <div class="burger">
+                    <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-menu">
                         <div class="burger-icon">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                    </div>
+                    </button>
                 </div>
 
-                <div class="menu accordion-container">
+                <div class="menu accordion-container" id="primary-menu">
                     {{ nav handle="header_navigation" }}
                         <div class="accordion-wrapper">
                             <div class="accordion">
                                 {{ if url }}
-                                    <a href="{{ url }}">{{ title }}</a>
+                                    <a href="{{ url }}" {{ if is_current }}class="current" aria-current="page"{{ /if }}>{{ title }}</a>
                                 {{ else }}
                                     <p>{{ title }}</p>
                                 {{ endif }}

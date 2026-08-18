@@ -5,11 +5,11 @@ section.values-grid {
 
 
     .wrapper {
-        background-color: #F2F2FE;
+        background-color: #f6f4f1;
         max-block-size: 80%;
         max-width: 100%;
         width: 100%;
-        padding: 5rem;
+        padding: 4rem 1rem;
         bottom: 0px;
 
 
@@ -18,7 +18,7 @@ section.values-grid {
             margin-bottom: 80px;
 
             .caption{
-                margin: 20px;
+                margin: 20px 0;
             }
 
             h5 {
@@ -114,7 +114,7 @@ section.values-grid {
             .caption {
                 width: 100%;
                 margin: 0 auto;
-                padding: 0 380px;
+                padding: 0 80px;
                 text-align: center;
             }
 
@@ -141,7 +141,7 @@ section.values-grid {
             left: 0;
             right: 0;
             height: 800px;
-            background-color: #F2F2FE;
+            background-color: #f6f4f1;
             z-index: -20;
         }
     }

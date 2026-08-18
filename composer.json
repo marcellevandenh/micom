@@ -19,7 +19,6 @@
         "backpack/permissionmanager": "^7.2",
         "backpack/pro": "^2.2",
         "backpack/theme-tabler": "^1.2",
-        "backpack/theme-surge": "*",
         "barryvdh/laravel-debugbar": "^3.8.1",
         "guzzlehttp/guzzle": "^7.2",
         "joetannenbaum/antlers-stack-tags": "^0.1.0",
@@ -29,10 +28,7 @@
         "pecotamic/sitemap": "^1.4",
         "sentry/sentry-laravel": "^4.10",
         "statamic/cms": "^5.0",
-        "stripe/stripe-php": "^17.4",
-        "surge/statamic-api-select": "*",
-        "surge/email-cms": "*",
-        "surgems/redirect-urls": "*"
+        "stripe/stripe-php": "^17.4"
     },
     "require-dev": {
         "backpack/devtools": "^3.1",
@@ -114,11 +110,6 @@
             {
                 "type": "composer",
                 "url": "https://repo.backpackforlaravel.com"
-            },
-        "theme":
-            {
-                "type": "git",
-                "url": "https://github.com/Surge-Marketing-Solutions/theme-surge"
             },
         "local-api": {
             "type": "path",

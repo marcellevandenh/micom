@@ -9,6 +9,14 @@ fields:
       width: 50
       max_files: 1
   -
+    handle: image_full_bleed
+    field:
+      type: toggle
+      display: 'Full Bleed Image'
+      instructions: 'Stretch the image across the complete hero with a subtle movement effect.'
+      width: 50
+      default: false
+  -
     import: color
   -
     handle: subtitle

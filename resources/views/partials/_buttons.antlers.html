@@ -1,17 +1,19 @@
 {{ if buttons }}
-    <div class="btn pill-btn">
+    <div class="btns">
         {{ buttons }}
-            <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="action" {{ style ? style : 'primary' }} {{ size ? size : 'md' }}">
-                {{ if icon }}
-                    <picture>
-                        <source media="(min-width: 1200px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
-                        <source media="(max-width: 1199px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
-                        <img loading="lazy" src="{{ icon }}" width="100%" height="100%" alt="{{ icon:alt }}">
-                    </picture>
-                {{ endif }}
+            <div class="btn pill-btn">
+                <a href="{{ link ? link : {asset ? asset : ''} }}" {{ asset || new_window ? 'target="_blank"' : '' }} class="action" {{ style ? style : 'primary' }} {{ size ? size : 'md' }}">
+                    {{ if icon }}
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
+                            <source media="(max-width: 1199px)" srcset="{{ glide:icon width='24' }}" type="image/webp">
+                            <img loading="lazy" src="{{ icon }}" width="100%" height="100%" alt="{{ icon:alt }}">
+                        </picture>
+                    {{ endif }}
 
-                {{ text }}
-            </a>
+                    {{ text }}
+                </a>
+            </div>
         {{ /buttons }}
     </div>
 {{ endif }}

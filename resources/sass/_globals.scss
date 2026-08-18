@@ -16,7 +16,8 @@
     body {
         @include flex($jc: space-between, $fd: column);
         min-height: 100vh;
-        background: $white;
+        background: white;
+        // background: linear-gradient(-270deg, #232323, #2a2929);
         position: relative;
         padding-top: $nav-height-sm;
 
@@ -28,7 +29,7 @@
             position: relative;
             padding: 40px 16px;
         }
-        
+
         .wrapper {
             max-width: 1216px;
             width: 100%;
@@ -53,7 +54,7 @@
         }
 
         h3 {
-            @include primary(800, 2rem, $black);
+            @include primary(800, 2rem, $orange);
             line-height: 1.3;
             margin-bottom: 16px;
         }
@@ -77,7 +78,7 @@
         }
 
         p {
-            @include primary(400, 1rem, $black);
+            @include primary(400, 1.125rem, $black);
             line-height: 1.3;
             margin-bottom: 1rem;
 
@@ -107,7 +108,7 @@
         }
 
         a {
-            @include primary(400, 1rem, $black);
+            @include primary(400, 1rem, black);
             text-decoration: underline;
 
             &:hover {
@@ -139,7 +140,7 @@
                 }
 
                 .instruction {
-                    @include primary(600, 1rem, $brand);
+                    @include primary(600, 1rem, $white);
                     padding-top: 8px;
                 }
 
@@ -148,7 +149,7 @@
                     gap: 8px;
                     padding-top: 12px;
 
-                    @include primary(400, 1.125rem, $black);
+                    @include primary(400, 1.125rem, $white);
 
                     input {
                         width: 24px;
@@ -275,7 +276,7 @@
 
         .privacy-policy {
             margin: 10px 0;
-            
+
             * {
                 @include primary($fs: 0.75rem);
                 line-height: 1.3;
@@ -348,7 +349,7 @@
             .accordion svg {
                 transform: rotate(90deg);
             }
-            
+
             .panel {
                 max-height: 600px;
             }
@@ -375,6 +376,11 @@
 
         a {
             text-decoration: underline;
+
+            &.action {
+                text-decoration: none;
+                @include primary(700, 1rem, $white);
+            }
         }
     }
 
@@ -386,6 +392,7 @@
 
     .btn {
         @include btn();
+        margin-top: 18px;
         padding: 15px 20px 12px;
         width: fit-content;
         @include flex(center, center, row);
@@ -393,7 +400,7 @@
         background: $brand;
         @include primary(700, 1rem, $white);
         border: solid 2px $brand;
-        text-transform: uppercase;
+        text-transform: none;
         text-decoration: none !important;
         transition: all .3s ease;
 
@@ -409,6 +416,7 @@
         &:hover {
             background: $brandDark;
             border-color: $brandDark;
+            @include primary(700, 1rem, $white);
         }
 
         &.outline-btn {
@@ -475,7 +483,7 @@
                 p {
                     font-size: 1.125rem;
                 }
-    
+
                 a {
                     font-size: 1.125rem;
                 }
@@ -490,23 +498,23 @@
                 .field {
                     &.flex-25 {
                         flex-basis: calc(25% - 14px);
-                    } 
+                    }
 
                     &.flex-33 {
                         flex-basis: calc(33% - 12px);
                     }
                     &.flex-50 {
                         flex-basis: calc(50% - 8px);
-                    } 
-                    
+                    }
+
                     &.flex-66 {
                         flex-basis: calc(66% - 6px);
                     }
-                    
+
                     &.flex-75 {
                         flex-basis: calc(75% - 4px);
-                    } 
-                    
+                    }
+
                     &.flex-100 {
                         flex-basis: 100%;
                     }
@@ -528,25 +536,29 @@
             h1 {
                 font-size: 6rem;
             }
-    
+
             h2 {
                 font-size: 3.75rem;
             }
-    
+
             h3 {
                 font-size: 3rem;
             }
-    
+
             h4 {
                 font-size: 2rem;
             }
-    
+
             h5 {
                 font-size: 1.5rem;
             }
-    
+
             h6 {
                 font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 1.125rem;
             }
         }
 
@@ -574,7 +586,7 @@
 
 @media #{$xx-large} {
     * {
-        // Forms 
+        // Forms
         form {
             .captcha {
                 .g-recaptcha, .captcha-placeholder {

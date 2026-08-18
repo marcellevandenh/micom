@@ -3,7 +3,7 @@
 section.hero-solid {
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 100px 0;
+    border-radius: 0 0 0 0;
 
     .background {
         position: absolute;
@@ -61,19 +61,10 @@ section.hero-solid {
         background: linear-gradient(90deg, $red, rgba($red, .6));
         }
 
-
-        // &.purple {  background: $purple; &.no-image{ background: linear-gradient(90deg, $purple, rgba($purple, .6)); } }
-        // &.pink {background: $pink; &.no-image{ background: linear-gradient(90deg, $pink, rgba($pink, .6)); }}
-        // &.yellow {  background: $yellow; &.no-image{ background: linear-gradient(90deg, $yellow, rgba($yellow, .6)); }}
-        // &.orange {  background: $orange; &.no-image{ background: linear-gradient(90deg, $orange, rgba($orange, .6)); }}
-        // &.green {  background: $green; &.no-image{ background: linear-gradient(90deg, $green, rgba($green, .6)); }}
-        // &.teal {  background: $teal; &.no-image{ background: linear-gradient(90deg, $teal, rgba($teal, .6)); }}
-        // &.blue { background: $blue; &.no-image{ background: linear-gradient(90deg, $blue, rgba($blue, .6)); }}
-        // &.altOrange {  background: $altOrange; &.no-image{ background: linear-gradient(90deg, $altOrange, rgba($altOrange, .6)); }}
-        // &.lilac{ background: $lilac; &.no-image{ background: linear-gradient(90deg, $lilac, rgba($lilac, .6)); }}
-        // &.darkpurple{ background: $darkPurple; &.no-image{ background: linear-gradient(90deg, $darkPurple, rgba($darkPurple, .6)); }}
-        // &.altpurple { background: $purpleAlt;&.no-image{ background: linear-gradient(90deg, $purpleAlt, rgba($purpleAlt, .6)); }}
-        // &.red { background: $red; &.no-image{ background: linear-gradient(90deg, $red, rgba($red, .6)); }}
+        &.grey {
+            // background: linear-gradient(90deg, $brandDark, rgba($brandDark, .6));
+            background: $brandDark;
+        }
 
         &.no-image{
 
@@ -86,13 +77,25 @@ section.hero-solid {
         }
 
         .image {
-            display: none;
+            display: block;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .18;
+
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
             z-index: 1;
         }
 
@@ -131,28 +134,96 @@ section.hero-solid {
 
 @media #{ $large } {
     section.hero-solid {
-        border-radius: 0 0 300px 0;
+        border-radius: 0 0 0 0;
         position: relative;
 
-            .background {
-                overflow: visible;
-                z-index: -1;
+        .background {
+            overflow: visible;
+            z-index: -1;
 
             .image {
+                inset: 0 0 0 auto;
+                width: 48%;
+                height: 100%;
+                opacity: 1;
 
-                display: block;
-                width: 100%;
-                max-width: 400px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(90deg, $brandDark 0%, transparent 35%);
+                    z-index: 2;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        .wrapper {
+            .content {
+                max-width: 52%;
+            }
+        }
+    }
+}
+
+section.hero-solid.full-bleed-image {
+    .background {
+        background: transparent;
+
+        &.orange {
+            background: transparent;
+        }
+
+        .image {
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+
+            &::before {
+                content: '';
                 position: absolute;
-                left: 75%;
+                inset: 0;
+                background: linear-gradient(90deg, rgba($black, .78) 0%, rgba($black, .52) 48%, rgba($black, .16) 100%);
+                z-index: 2;
+                pointer-events: none;
+            }
 
-                bottom: -350px;
+            img {
+                animation: hero-image-drift 16s ease-in-out infinite alternate;
+                transform: scale(1.04);
+                transform-origin: center;
+                will-change: transform;
+            }
+        }
+    }
+
+    .wrapper {
+        .content {
+            max-width: 688px;
+            text-shadow: 0 2px 16px rgba($black, .35);
+        }
+    }
+}
+
+@keyframes hero-image-drift {
+    from {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: scale(1.1) translate3d(-1.5%, -1%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section.hero-solid.full-bleed-image {
+        .background {
+            .image {
                 img {
-                    height: auto;
-                    display: block;
-                    overflow: visible;
-                    z-index: 1;
-                 }
+                    animation: none;
+                    transform: none;
+                }
             }
         }
     }
