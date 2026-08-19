@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
+use Backpack\PermissionManager\app\Http\Requests\UserUpdateCrudRequest;
 
-class UserRequest extends FormRequest
+class UserRequest extends UserUpdateCrudRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,9 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            // 'name' => 'required|min:5|max:255'
-        ];
+        return array_merge(parent::rules(), [
+            'super' => ['sometimes', 'boolean'],
+        ]);
     }
 
     /**
@@ -37,7 +37,7 @@ class UserRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'super' => 'super user',
         ];
     }
 

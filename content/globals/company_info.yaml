@@ -1,6 +1,7 @@
 title: 'Company Info'
 data:
   logo: micom-logo.webp
+  favicon: favicon-128x128.png
   phone_number: '07412 490186'
   email_address: michael@micomproperty.co.uk
   copyright: '© Micom'
