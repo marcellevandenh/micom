@@ -8,7 +8,7 @@
 
 <li class="nav-item">
     <a class="nav-link" href="../../../cp">
-        <i class="nav-icon la la-pencil-alt d-block d-lg-none d-xl-block"></i> <span>CMS Dashboard</span>    </a>
+        <i class="nav-icon la la-pencil-alt d-block d-lg-none d-xl-block"></i> <span>CMS Dashboard</span></a>
 </li>
 
 
