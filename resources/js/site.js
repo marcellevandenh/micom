@@ -121,9 +121,56 @@ const copyText = () => {
     }
 }
 
+const initJobToTradeWidget = () => {
+    const trigger = document.querySelector('.job-to-trade-widget');
+    const dialog = document.querySelector('.job-to-trade-dialog');
+    const closeButton = dialog?.querySelector('.job-to-trade-dialog__close');
+
+    if (!trigger || !dialog || !closeButton) {
+        return;
+    }
+
+    const closeDialog = (shouldFocusTrigger = false) => {
+        if (dialog.open) {
+            dialog.close();
+        }
+
+        trigger.setAttribute('aria-expanded', 'false');
+
+        if (shouldFocusTrigger) {
+            trigger.focus();
+        }
+    };
+
+    trigger.addEventListener('click', () => {
+        if (dialog.open) {
+            closeDialog();
+            return;
+        }
+
+        dialog.show();
+        trigger.setAttribute('aria-expanded', 'true');
+        closeButton.focus();
+    });
+
+    closeButton.addEventListener('click', () => closeDialog(true));
+    dialog.addEventListener('close', () => trigger.setAttribute('aria-expanded', 'false'));
+
+    document.addEventListener('click', (event) => {
+        if (dialog.open && !dialog.contains(event.target) && !trigger.contains(event.target)) {
+            closeDialog();
+        }
+    });
+};
+
 window.addEventListener('DOMContentLoaded', function () {
     initHeader(document.querySelector('header'));
     initForms(document.querySelectorAll('form'));
     initAccordions(document.querySelectorAll(".accordion"));
     copyText(document.querySelector('#copyText'));
+    try {
+        initJobToTradeWidget();
+    } catch (error) {
+        console.error('Unable to initialise the JobToTrade widget.', error);
+    }
 });
