@@ -1,0 +1,48 @@
+<button
+    class="job-to-trade-widget"
+    type="button"
+    aria-label="Post a job with JobToTrade"
+    aria-controls="job-to-trade-dialog"
+    aria-expanded="false"
+>
+    <span class="job-to-trade-widget__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m4 10.5 8-7 8 7"/>
+            <path d="M6.5 9.5v10h11v-10"/>
+            <path class="job-to-trade-widget__check" d="m9.2 13.1 2 2 4.3-4.5"/>
+        </svg>
+    </span>
+    <span class="job-to-trade-widget__label">Post a job</span>
+</button>
+
+<dialog class="job-to-trade-dialog" id="job-to-trade-dialog" aria-labelledby="job-to-trade-title">
+    <button class="job-to-trade-dialog__close" type="button" aria-label="Close JobToTrade message">
+        <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m6 6 12 12M18 6 6 18"/>
+        </svg>
+    </button>
+
+    <div class="job-to-trade-dialog__heading">
+        <span class="job-to-trade-dialog__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="m4 10.5 8-7 8 7"/>
+                <path d="M6.5 9.5v10h11v-10"/>
+                <path class="job-to-trade-dialog__check" d="m9.2 13.1 2 2 4.3-4.5"/>
+            </svg>
+        </span>
+        <h3>JobToTrade</h3>
+    </div>
+
+    <h2 id="job-to-trade-title">Got a small job that needs doing?</h2>
+    <p>Tell us what you need and let the work come to a trusted local trade.</p>
+    <p class="job-to-trade-dialog__services">Handyman <span>·</span> Repairs <span>·</span> Cleaning <span>·</span> Decorating</p>
+
+    <a class="job-to-trade-dialog__cta" href="https://jobs.micomproperty.co.uk/">
+        Post your job free
+        <svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+        </svg>
+    </a>
+
+    <p class="job-to-trade-dialog__reassurance">Local trades <span>·</span> No obligation</p>
+</dialog>
