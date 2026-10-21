@@ -1,0 +1,8 @@
+title: Project introduction
+fields:
+  - handle: label
+    field:
+      type: text
+      display: Label
+      default: 'A Micom project'
+      instructions: 'The project name, location, summary, duration and image come from the project fields above.'

@@ -1,0 +1,40 @@
+<section class="projects-index">
+    <div class="wrapper">
+        <div class="projects-index__intro">
+            <p class="projects-index__eyebrow">OUR WORK</p>
+            <h1>{{ heading or 'Projects' }}</h1>
+            {{ if introduction }}<p>{{ introduction }}</p>{{ /if }}
+        </div>
+        {{ collection:projects as="projects" paginate="9" sort="title:asc" }}
+            <div class="projects-index__grid">
+                {{ projects }}
+                    <article class="projects-index__card">
+                        {{ if featured_image }}
+                            <a class="projects-index__image" href="{{ url }}" aria-label="View {{ title | entities }} project">
+                                <img src="{{ glide:featured_image width='800' height='600' fit='crop' format='webp' }}"
+                                    srcset="{{ glide:featured_image width='480' height='360' fit='crop' format='webp' }} 480w, {{ glide:featured_image width='800' height='600' fit='crop' format='webp' }} 800w"
+                                    sizes="(min-width: 992px) 560px, (min-width: 601px) 50vw, 100vw"
+                                    width="800" height="600" loading="lazy" decoding="async" alt="{{ featured_image:alt | entities }}">
+                            </a>
+                        {{ /if }}
+                        <div class="projects-index__body">
+                            {{ if location }}<span class="project-location">{{ location }}</span>{{ /if }}
+                            <h2><a href="{{ url }}">{{ title }}</a></h2>
+                            {{ if summary }}<p>{{ summary }}</p>{{ /if }}
+                            <a class="projects-index__link" href="{{ url }}">Explore {{ title }} <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+                {{ /projects }}
+            </div>
+            {{ if no_results }}<p>More projects are on the way. Please check back soon.</p>{{ /if }}
+            {{ paginate }}
+                {{ if prev_page or next_page }}
+                    <nav class="projects-index__pagination" aria-label="Projects pages">
+                        {{ if prev_page }}<a href="{{ prev_page }}">&larr; Previous projects</a>{{ /if }}
+                        {{ if next_page }}<a href="{{ next_page }}">Next projects &rarr;</a>{{ /if }}
+                    </nav>
+                {{ /if }}
+            {{ /paginate }}
+        {{ /collection:projects }}
+    </div>
+</section>

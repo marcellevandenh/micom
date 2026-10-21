@@ -1,0 +1,13 @@
+@import './project-shared';
+
+section.project-section {
+    .project-section__copy { max-width: 780px; margin-bottom: 28px; }
+    .project-section__description p + p { margin-top: 16px; }
+    .project-section__gallery { display: grid; gap: 24px; align-items: start; }
+    .project-section__gallery a { display: block; width: 100%; border-radius: 8px; overflow: hidden; }
+    .project-section__gallery img { width: 100%; height: auto; }
+    figcaption { @include primary(400, .875rem, $brandDark); padding-top: 10px; line-height: 1.5; }
+    & + .project-section { border-top: 1px solid rgba($brandDark, .15); }
+    @media #{ $medium } { .project-section__gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media #{ $large } { .project-section__gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+}
