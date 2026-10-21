@@ -12,8 +12,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 1
-updated_at: 1787050630
+updated_by: 2
+updated_at: 1792593057
 page_builder:
   -
     id: serviceshero
@@ -286,4 +286,6 @@ page_builder:
     apply_page_colour: false
     type: call_to_action
     enabled: true
+meta_title: 'Property Maintenance Services Darlington'
+meta_description: 'Explore property maintenance, repairs, refurbishments, decorating and landlord services in Darlington and County Durham'
 ---
