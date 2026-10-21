@@ -10,10 +10,30 @@ stylesheets:
   code: null
   mode: htmlmixed
 scripts:
-  code: null
+  code: |-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Micom Property",
+      "url": "https://micomproperty.co.uk",
+      "telephone": "+447412490186",
+      "email": "michael@micomproperty.co.uk",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Darlington"
+        },
+        {
+          "@type": "Place",
+          "name": "County Durham"
+        }
+      ]
+    }
+    </script>
   mode: htmlmixed
-updated_by: 1
-updated_at: 1787049766
+updated_by: 2
+updated_at: 1792594932
 page_builder:
   -
     id: mlgjgejg
@@ -219,7 +239,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Need a reliable property maintenance partner?'
+            text: 'Need a reliable property maintenance partner in and around Darlington?'
     buttons:
       -
         id: homecontact
@@ -229,4 +249,6 @@ page_builder:
     apply_page_colour: false
     type: call_to_action
     enabled: true
+meta_title: 'Property Maintenance Darlington'
+meta_description: 'Reliable property maintenance, repairs and refurbishment in Darlington and the North East. Micom helps homeowners and landlords care for their properties.'
 ---

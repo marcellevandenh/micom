@@ -1,5 +1,6 @@
 ---
 id: 1d581b92-cd04-43fe-afde-778db935b772
+published: false
 blueprint: page
 title: 'Protected Learning Time'
 page_builder:
@@ -18,7 +19,7 @@ page_builder:
           -
             type: text
             text: "Providing evening and weekend out of hours GP appointments for the patients of South Tees\_"
-    image: female-doctor-clipboard.png
+    image_full_bleed: false
   -
     id: merelf6n
     subtitle: 'PROTECTED LEARNING TIME'
@@ -129,7 +130,6 @@ page_builder:
             type: paragraph
         type: items
         enabled: true
-        icon: plastersvg.svg
       -
         id: mesjaxx5
         content:
@@ -149,7 +149,6 @@ page_builder:
                 text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatus'
           -
             type: paragraph
-        icon: plastersvg.svg
         type: items
         enabled: true
       -
@@ -171,7 +170,6 @@ page_builder:
                 text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatus'
           -
             type: paragraph
-        icon: homesvg.svg
         type: items
         enabled: true
       -
@@ -193,7 +191,6 @@ page_builder:
                 text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatus'
           -
             type: paragraph
-        icon: homesvg.svg
         type: items
         enabled: true
       -
@@ -215,7 +212,6 @@ page_builder:
                 text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatus'
           -
             type: paragraph
-        icon: homesvg.svg
         type: items
         enabled: true
     apply_page_colour: true
@@ -227,7 +223,6 @@ page_builder:
     items:
       -
         id: mesnyvcy
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -240,7 +235,6 @@ page_builder:
         enabled: true
       -
         id: mesnzcax
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -283,8 +277,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1760711437
+updated_by: 2
+updated_at: 1792591830
 color_field: Purple
 page_colour: Orange
 duplicated_from: 2c50a4f8-4eea-4016-be01-8da27e13a936

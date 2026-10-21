@@ -1,7 +1,15 @@
 <footer>
     <div class="top">
         <div class="wrapper">
-
+            <nav class="policy-navigation" aria-label="Policies">
+                <ul>
+                    {{ nav handle="footer_navigation" }}
+                        <li>
+                            <a href="{{ url }}" {{ if is_current }}aria-current="page"{{ /if }}>{{ title }}</a>
+                        </li>
+                    {{ /nav }}
+                </ul>
+            </nav>
         </div>
     </div>
 

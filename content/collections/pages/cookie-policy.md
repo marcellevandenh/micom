@@ -12,14 +12,14 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756291920
+updated_by: 2
+updated_at: 1792594587
 page_builder:
   -
     id: mett78qu
     colour: altpurple
     type: hero_solid
-    enabled: true
+    enabled: false
     content:
       -
         type: heading
@@ -29,6 +29,7 @@ page_builder:
           -
             type: text
             text: 'Cookie Policy'
+    image_full_bleed: false
   -
     id: metp9xhu
     type: plain_content
@@ -37,8 +38,13 @@ page_builder:
       -
         type: heading
         attrs:
-          level: 1
+          level: 3
         content:
+          -
+            type: text
+            text: 'Cookie Policy'
+          -
+            type: hardBreak
           -
             type: text
             marks:
