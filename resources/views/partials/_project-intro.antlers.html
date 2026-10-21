@@ -1,0 +1,23 @@
+<section class="project-intro">
+    <div class="wrapper">
+        <a class="project-intro__back" href="/projects">&larr; All projects</a>
+        <div class="project-intro__grid">
+            <div class="project-intro__copy">
+                <p class="project-intro__eyebrow">{{ label or 'A Micom project' }}</p>
+                <h1>{{ title }}</h1>
+                <div class="project-intro__meta">
+                    {{ if location }}<span class="project-location">{{ location }}</span>{{ /if }}
+                    {{ if duration }}<span class="project-intro__duration">Completed in {{ duration }}</span>{{ /if }}
+                </div>
+                {{ if summary }}<p>{{ summary }}</p>{{ /if }}
+                <a class="btn" href="/contact">Discuss your project</a>
+            </div>
+            {{ if featured_image }}
+                <img class="project-intro__image" src="{{ glide:featured_image width='1000' height='900' fit='crop' format='webp' }}"
+                    srcset="{{ glide:featured_image width='600' height='540' fit='crop' format='webp' }} 600w, {{ glide:featured_image width='1000' height='900' fit='crop' format='webp' }} 1000w"
+                    sizes="(min-width: 992px) 560px, 100vw"
+                    width="1000" height="900" fetchpriority="high" alt="{{ featured_image:alt | entities }}">
+            {{ /if }}
+        </div>
+    </div>
+</section>

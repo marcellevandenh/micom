@@ -1,0 +1,12 @@
+@import './project-shared';
+
+section.project-intro {
+    background: $lightLilac;
+    .project-intro__back { margin-bottom: 28px; text-decoration: underline; text-underline-offset: 4px; }
+    .project-intro__grid { display: grid; gap: 32px; align-items: center; }
+    .project-intro__eyebrow { @include primary(700, .875rem, $brandDark); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+    .project-intro__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+    .project-intro__duration { @include primary(600, .875rem, $brandDark); }
+    .project-intro__image { width: 100%; aspect-ratio: 10 / 9; object-fit: cover; border-radius: 12px; }
+    @media #{ $large } { .project-intro__grid { grid-template-columns: 1fr 1fr; gap: 48px; } }
+}
