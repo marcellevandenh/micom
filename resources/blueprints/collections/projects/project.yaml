@@ -1,0 +1,48 @@
+title: Project
+tabs:
+  main:
+    display: Project
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              required: true
+              validate: [required]
+          - handle: location
+            field:
+              type: text
+              display: Location tag
+              instructions: 'Town or area, for example Darlington.'
+              validate: [required]
+          - handle: summary
+            field:
+              type: textarea
+              display: Summary
+              instructions: 'A short introduction, also shown on the Projects listing.'
+              validate: [required]
+          - handle: duration
+            field:
+              type: text
+              display: Duration
+          - handle: featured_image
+            field:
+              type: assets
+              container: assets
+              max_files: 1
+              display: Featured image
+              validate: [required]
+          - import: page_builder
+  seo:
+    display: SEO
+    sections:
+      - fields:
+          - import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      - fields:
+          - handle: slug
+            field:
+              type: slug
+              validate: [required, 'max:200']
