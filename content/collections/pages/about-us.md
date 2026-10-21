@@ -12,8 +12,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 1
-updated_at: 1787048413
+updated_by: 2
+updated_at: 1792594891
 page_builder:
   -
     id: abouthero
@@ -148,7 +148,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Let us look after your property.'
+            text: 'Let us look after your property  '
     buttons:
       -
         id: aboutservices

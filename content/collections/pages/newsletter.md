@@ -1,5 +1,6 @@
 ---
 id: fbf61176-c515-44f3-ae75-5771876cbe0c
+published: false
 blueprint: page
 title: Newsletter
 page_builder:
@@ -53,6 +54,6 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756734300
+updated_by: 2
+updated_at: 1792591320
 ---

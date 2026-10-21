@@ -1,5 +1,6 @@
 ---
 id: 178ae06e-db09-4891-a834-e8617a27cddb
+published: false
 blueprint: page
 title: 'Meet the Team'
 page_builder:
@@ -46,7 +47,6 @@ page_builder:
                 text: 'Egestas elit dui scelerisque ut eu purus aliquam vitae.'
         type: new_set
         enabled: true
-        image: teamdoctor.jpg
         subtitle: NAME
       -
         id: meskk6zc
@@ -62,11 +62,9 @@ page_builder:
                 text: 'Egestas elit dui scelerisque ut eu purus aliquam vitae.'
         type: new_set
         enabled: true
-        image: teamdoctor.jpg
         subtitle: NAME
       -
         id: mesmca0t
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -79,7 +77,6 @@ page_builder:
         enabled: true
       -
         id: mesmera3
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -92,7 +89,6 @@ page_builder:
         enabled: true
       -
         id: mesmkk0b
-        image: teamdoctor.jpg
         subtitle: Fifth
         content:
           -
@@ -120,7 +116,6 @@ page_builder:
     items:
       -
         id: mesmmk47
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -133,7 +128,6 @@ page_builder:
         enabled: true
       -
         id: mesmnbeo
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -161,7 +155,6 @@ page_builder:
     items:
       -
         id: mesmo7aj
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -174,7 +167,6 @@ page_builder:
         enabled: true
       -
         id: mesmolmt
-        image: teamdoctor.jpg
         subtitle: NAME
         content:
           -
@@ -213,6 +205,6 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756734714
+updated_by: 2
+updated_at: 1792591850
 ---

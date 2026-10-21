@@ -1,5 +1,6 @@
 ---
 id: 66bd5baf-2eb1-449d-94c2-b81568914e26
+published: false
 blueprint: page
 title: 'Reset Password Form'
 schema:
@@ -12,8 +13,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756820174
+updated_by: 2
+updated_at: 1792591839
 duplicated_from: c5502f0f-fcf3-4332-9d27-99b93135f91c
 page_builder:
   -
