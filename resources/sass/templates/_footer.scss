@@ -114,6 +114,46 @@ footer {
     }
 }
 
+footer .top .wrapper .policy-navigation {
+    width: 100%;
+
+    ul {
+        @include flex(center, center, column);
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        @include primary(400, 1rem, $white);
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 8px;
+        margin: 0;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        &:hover {
+            color: $brandLight;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $white;
+            outline-offset: 4px;
+        }
+    }
+
+    @media #{ $medium } {
+        ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+        }
+    }
+}
+
 @media #{ $medium } {
     footer {
         .bottom {

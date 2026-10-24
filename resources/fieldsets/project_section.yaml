@@ -1,0 +1,29 @@
+title: Project section
+fields:
+  - handle: heading
+    field:
+      type: text
+      display: Heading
+      validate: [required]
+  - handle: description
+    field:
+      type: markdown
+      display: Text
+      buttons: [bold, italic, unorderedlist, anchor]
+  - handle: photos
+    field:
+      type: grid
+      display: Photos
+      mode: stacked
+      fields:
+        - handle: image
+          field:
+            type: assets
+            container: assets
+            max_files: 1
+            validate: [required]
+            display: Photo
+        - handle: caption
+          field:
+            type: text
+            display: Caption

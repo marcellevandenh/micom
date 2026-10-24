@@ -1,0 +1,10 @@
+title: Projects
+template: default
+layout: layout
+route: '/projects/{slug}'
+sort_dir: asc
+revisions: false
+preview_targets:
+  - label: Project
+    url: '{permalink}'
+    refresh: true

@@ -12,8 +12,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756292171
+updated_by: 2
+updated_at: 1792594619
 page_builder:
   -
     id: metuypke
@@ -27,10 +27,19 @@ page_builder:
             type: text
             text: 'Privacy Policy'
     type: hero_solid
-    enabled: true
+    enabled: false
+    image_full_bleed: false
   -
     id: metplddy
     content:
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: 'Privacy Policy'
       -
         type: paragraph
         content:
@@ -52,11 +61,14 @@ page_builder:
               -
                 type: link
                 attrs:
-                  href: 'https://www.elmalliance.co.uk/'
+                  href: 'mailto:mailto:michael@micomproperty.co.uk'
                   rel: null
                   target: null
                   title: null
-            text: www.elmalliance.co.uk
+            text: michael@micomproperty.co.uk
+          -
+            type: text
+            text: .
       -
         type: paragraph
         content:
@@ -71,7 +83,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'Bocketts Farm Ltd.'
+            text: 'Micom Property'
           -
             type: text
             text: ' Is the data controller and we are responsible for your personal data (referred to as “we”, “us” or “our” in this privacy notice).'
@@ -102,7 +114,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: 'ELM Alliance'
+            text: 'MiCom Property'
           -
             type: hardBreak
           -
@@ -115,7 +127,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: andrew.hamilton7@nhs.net
+            text: michael@micomproperty.co.uk.
           -
             type: hardBreak
           -
@@ -128,20 +140,7 @@ page_builder:
             marks:
               -
                 type: bold
-            text: '1st Floor (Hirsel Medical Practice), 5 Trinity Mews, North Ormesby Health Village, Middlesbrough, TS3 6AL.'
-          -
-            type: hardBreak
-          -
-            type: hardBreak
-          -
-            type: text
-            text: 'Telephone number: ('
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: '01642) 511361'
+            text: '9 Honeywood Gardens, Darlington, DL3 0LL.'
       -
         type: paragraph
         content:
@@ -154,11 +153,14 @@ page_builder:
               -
                 type: link
                 attrs:
-                  href: 'mailto:andrew.hamilton7@nhs.net'
+                  href: 'mailto:mailto:michael@micomproperty.co.uk'
                   rel: null
                   target: null
                   title: null
-            text: andrew.hamilton7@nhs.net
+            text: michael@micomproperty.co.uk
+          -
+            type: text
+            text: .
       -
         type: paragraph
         content:
@@ -272,21 +274,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'We will only use your personal data for a purpose it was collected for or a reasonably compatible purpose if necessary. For more information on this please email us at '
-          -
-            type: text
-            marks:
-              -
-                type: link
-                attrs:
-                  href: 'mailto:andrew.hamilton7@nhs.net'
-                  rel: null
-                  target: null
-                  title: null
-            text: andrew.hamilton7@nhs.net
-          -
-            type: text
-            text: '. In case we need to use your details for an unrelated new purpose we will let you know and explain the legal grounds for processing.'
+            text: 'We will only use your personal data for a purpose it was collected for or a reasonably compatible purpose if necessary. For more information on this please email us at micompropertyIn case we need to use your details for an unrelated new purpose we will let you know and explain the legal grounds for processing.'
       -
         type: paragraph
         content:
@@ -526,11 +514,11 @@ page_builder:
               -
                 type: link
                 attrs:
-                  href: 'mailto:andrew.hamilton7@nhs.net'
+                  href: 'mailto:mailto:michael@micomproperty.co.uk'
                   rel: null
                   target: null
                   title: null
-            text: andrew.hamilton7@nhs.net
+            text: michael@micomproperty.co.uk
           -
             type: text
             text: .

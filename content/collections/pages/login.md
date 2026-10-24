@@ -1,5 +1,6 @@
 ---
 id: c5502f0f-fcf3-4332-9d27-99b93135f91c
+published: false
 blueprint: page
 title: Login
 schema:
@@ -12,8 +13,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756736950
+updated_by: 2
+updated_at: 1792591330
 page_builder:
   -
     id: mdiuemwu

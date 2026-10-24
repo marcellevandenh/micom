@@ -1,0 +1,17 @@
+@import '../variables';
+
+.project-location {
+    @include primary(600, .875rem, $brandDark);
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid $brandDark;
+    border-radius: 30px;
+    background: $white;
+}
+
+section.projects-index, section.project-intro, section.project-section {
+    a:focus-visible { outline: 3px solid $brandDark; outline-offset: 5px; }
+    p { line-height: 1.7; }
+    h1 { font-size: clamp(2rem, 6vw, 4.5rem); }
+    h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+}

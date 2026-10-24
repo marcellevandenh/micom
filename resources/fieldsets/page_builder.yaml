@@ -69,3 +69,15 @@ fields:
               fields:
                 -
                   import: faq
+            projects_index:
+              display: 'Projects listing'
+              fields:
+                - import: projects_index
+            project_intro:
+              display: 'Project introduction'
+              fields:
+                - import: project_intro
+            project_section:
+              display: 'Project section'
+              fields:
+                - import: project_section

@@ -1,5 +1,6 @@
 ---
 id: fe8116ce-f46f-449b-9a67-e40d62791d6b
+published: false
 blueprint: page
 title: 'My Document List'
 schema:
@@ -12,8 +13,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756737631
+updated_by: 2
+updated_at: 1792591312
 page_builder:
   -
     id: mf186yrv
@@ -30,6 +31,7 @@ page_builder:
     type: hero_solid
     enabled: true
     colour: altpurple
+    image_full_bleed: false
   -
     id: md8xntda
     type: document_list

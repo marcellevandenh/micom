@@ -12,8 +12,8 @@ stylesheets:
 scripts:
   code: null
   mode: htmlmixed
-updated_by: 4
-updated_at: 1756292221
+updated_by: 2
+updated_at: 1792594682
 page_builder:
   -
     id: metv14z5
@@ -27,10 +27,19 @@ page_builder:
             type: text
             text: 'Terms and Conditions'
     type: hero_solid
-    enabled: true
+    enabled: false
+    image_full_bleed: false
   -
     id: metph9js
     content:
+      -
+        type: heading
+        attrs:
+          level: 3
+        content:
+          -
+            type: text
+            text: 'Terms and Conditions'
       -
         type: heading
         attrs:
@@ -47,28 +56,19 @@ page_builder:
         content:
           -
             type: text
-            text: "Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern ELM Alliance's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website."
+            text: "Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Micom Property's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website."
       -
         type: paragraph
         content:
           -
             type: text
-            text: "The term 'ELM Alliance' or 'us' or 'we' refers to the owner of the website whose registered office is: "
+            text: "The term 'Micom Property' or 'us' or 'we' refers to the owner of the website whose registered office is: "
           -
             type: text
             marks:
               -
                 type: bold
-            text: 'B3 Kingfisher House, Kingsway, Team Valley, Gateshead, Tyne And Wear, England, NE11 0JQ.'
-          -
-            type: text
-            text: ' Registered Company Number: '
-          -
-            type: text
-            marks:
-              -
-                type: bold
-            text: '10196823.'
+            text: '9 Honeywood Gardens Darlington DL3 0LL.'
           -
             type: text
             text: "  The term 'you' refers to the user or viewer of our website."

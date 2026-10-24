@@ -1,0 +1,11 @@
+title: Projects listing
+fields:
+  - handle: heading
+    field:
+      type: text
+      display: Heading
+      default: 'Projects'
+  - handle: introduction
+    field:
+      type: textarea
+      display: Introduction
