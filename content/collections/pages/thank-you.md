@@ -53,12 +53,6 @@ page_builder:
     apply_page_colour: false
     type: call_to_action
     enabled: true
-  -
-    id: mf15n5z1
-    show_categories: false
-    show_count: 3
-    type: news_index
-    enabled: true
 schema:
   code: null
   mode: htmlmixed
